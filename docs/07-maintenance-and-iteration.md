@@ -10,3 +10,5 @@
 
 - how to use dev and prod to iterate while in production
 - how to run and test your lambda code locally
+
+[Return to README](../README.md)

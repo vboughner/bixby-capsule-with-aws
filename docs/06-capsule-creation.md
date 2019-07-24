@@ -29,3 +29,5 @@
 - choose a marketplace category
 - go through the checklist for submissions
 - make a public submission when you are ready to release
+
+Next: [Maintain and Iterate](07-maintenance-and-iteration.md)

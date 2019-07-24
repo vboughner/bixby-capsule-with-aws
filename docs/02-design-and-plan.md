@@ -60,3 +60,5 @@ a GET request commonly are.
 Take a moment to write some JSON that describes:
 - what must be in every request (action type and arguments, secretClientApiKey, clientVersion, etc.)
 - what will be in every response (success flag / error messages, serverVersion, query results, etc.)
+
+Next: [Set up the Database](03-database-setup.md)

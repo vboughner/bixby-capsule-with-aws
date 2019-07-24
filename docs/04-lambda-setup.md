@@ -7,3 +7,5 @@
 - deploy code from local to the Lambda
 - run a simple test at the Lambda
 - set up dev and prod aliases
+
+Next: [Configure the API Gateway](05-api-gateway-setup.md)

@@ -12,3 +12,5 @@
 - download and install Postman
 - create a basic REST POST query that will work
 - save it and test with it
+
+Next: [Create and Publish the Capsule](06-capsule-creation.md)
