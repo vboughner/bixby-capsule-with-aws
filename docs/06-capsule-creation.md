@@ -10,7 +10,6 @@
 - download and install Bixby Studio
 - create new capsule folder
 - update capsule.bxb file with your org and capsule name
-- initialize your git repository
 - place boilerplate rest api code (that uses dev center config and secret)
 - create an initial concept and action
 - train the capsule to call the action
