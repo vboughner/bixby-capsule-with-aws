@@ -1,0 +1,6 @@
+dialog (Elicitation) {
+  match {
+    RecallInputConcept
+  }
+  template("What would you like me to recall for you?")
+}

@@ -1,0 +1,35 @@
+train (t-f307n31r6lzk411l0h83xmsg8) {
+  utterance ("[g:MemorizeResponse] remember to (take out the trash)[v:MemorizeInputConcept]")
+  plan (Y2BmkC5LzNPLTc3NL6rU8wVRmVWpQanFBfl5xakMklgkHZNLMvPzGOSxSHnmFZSWOOfnJacWlDAwMTACMQOQZGQAASYIBgA=)
+  last-modified (1561762856531)
+}
+train (t-fbcgvuh6s1nwwa9dcv7tzhebu) {
+  utterance ("[g:DeleteConfirmation:prompt] (Don't do it)[v:DeleteConfirmation:false]")
+  plan (Y2BikC1LzNPLTc3NL6rUc0nNSS1Jdc7PS8ssyk0syczPIyTNCIQMDDxAzATEQDYA)
+  last-modified (1561931890830)
+}
+train (t-fek0toq71iqumc2jba822q310) {
+  utterance ("[g:RecallResponse] how should I (bake lasagna)[v:RecallInputConcept]")
+  plan (Y2BmkCxLzNPLTc3NL6rUC0pNTszJCUotLsjPK05lEMeQckwuyczPY5DFkPDMKygtcc7PS04tKGFgYmAEYgYgycgAAkwQDAA=)
+  last-modified (1557791586903)
+}
+train (t-frrnnukxx04eownexy7extsiw) {
+  utterance ("[g:DeleteConfirmation:prompt] (No)[v:DeleteConfirmation:false] thank you")
+  plan (Y2BikC1LzNPLTc3NL6rUc0nNSS1Jdc7PS8ssyk0syczPIyTNCIQMDDxAzATEQDYA)
+  last-modified (1561931991965)
+}
+train (t-fufgulxesiqyuo7jfpgwoi5cg) {
+  utterance ("[g:RecallResponse] where is the (car)[v:RecallInputConcept]")
+  plan (Y2BmkCxLzNPLTc3NL6rUC0pNTszJCUotLsjPK05lEMeQckwuyczPY5DFkPDMKygtcc7PS04tKGFgYmAEYgYgycgAAkwQDAA=)
+  last-modified (1556660570434)
+}
+train (t-fwm2ag0qbll5ejje0ghw3x7bs) {
+  utterance ("[g:RecallResponse] what do (I need to buy)[v:RecallInputConcept]")
+  plan (Y2BmkCxLzNPLTc3NL6rUC0pNTszJCUotLsjPK05lEMeQckwuyczPY5DFkPDMKygtcc7PS04tKGFgYmAEYgYgycgAAkwQDAA=)
+  last-modified (1560440577397)
+}
+train (t-fxj43h33yn71nc2v9u0dcg0n4) {
+  utterance ([g:RecallLastMemoryResponse] what is the most recent memory)
+  plan (Y2BkUC5LzNPLTc3NL6rUC0pNTszJ8UksLvEFCwSlFhfk5xWnMoAAI4gAAA==)
+  last-modified (1559176095666)
+}

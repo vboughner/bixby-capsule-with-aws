@@ -1,0 +1,20 @@
+train (t-n47w364cjkwxu1dbo0q2r15e6) {
+  utterance ("[g:RecallInputConcept:prompt] (davids birthday)[v:RecallInputConcept]")
+  plan (Y2BikC1LzNPLTc3NL6rUC0pNTszJ8cwrKC1xzs9LTi0oISTNCIQMDDxAzATEQDYA)
+  last-modified (1560439240055)
+}
+train (t-nho8r6v4qbyupw41z1tmfj8hj) {
+  utterance ("[g:MemorizeResponse] remember that (I like fish tacos from una mas)[v:MemorizeInputConcept]")
+  plan (Y2BmkC5LzNPLTc3NL6rU8wVRmVWpQanFBfl5xakMklgkHZNLMvPzGOSxSHnmFZSWOOfnJacWlDAwMTACMQOQZGQAASYIBgA=)
+  last-modified (1560439265999)
+}
+train (t-not66tdwml3k2o856seu6jmx7) {
+  utterance ("[g:RecallResponse] recall (what fred said)[v:RecallInputConcept]")
+  plan (Y2BmkCxLzNPLTc3NL6rUC0pNTszJCUotLsjPK05lEMeQckwuyczPY5DFkPDMKygtcc7PS04tKGFgYmAEYgYgycgAAkwQDAA=)
+  last-modified (1556749987250)
+}
+train (t-nqwc401m34d1qnyel4g6480nm) {
+  utterance ("[g:MemorizeResponse] memorize (all the toothbrushes are in the cabinet)[v:MemorizeInputConcept]")
+  plan (Y2BmkC5LzNPLTc3NL6rU8wVRmVWpQanFBfl5xakMklgkHZNLMvPzGOSxSHnmFZSWOOfnJacWlDAwMTACMQOQZGQAASYIBgA=)
+  last-modified (1556659277916)
+}

@@ -1,0 +1,10 @@
+train (t-5s11z91mgm42ueoaeacx2nqjw) {
+  utterance ("[g:RecallResponse] what do I have in (March)[v:RecallInputConcept]")
+  plan (Y2BmkCxLzNPLTc3NL6rUC0pNTszJCUotLsjPK05lEMeQckwuyczPY5DFkPDMKygtcc7PS04tKGFgYmAEYgYgycgAAkwQDAA=)
+  last-modified (1560439986517)
+}
+train (t-5xh87xk1ci8d1ahrew67wjph1) {
+  utterance ("[g:RecallResponse] when did (i take my vitamins)[v:RecallInputConcept]")
+  plan (Y2BmkCxLzNPLTc3NL6rUC0pNTszJCUotLsjPK05lEMeQckwuyczPY5DFkPDMKygtcc7PS04tKGFgYmAEYgYgycgAAkwQDAA=)
+  last-modified (1560439657207)
+}

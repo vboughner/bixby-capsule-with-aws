@@ -1,0 +1,3 @@
+text (MemoryText) {
+  description (text content of a memory)
+}

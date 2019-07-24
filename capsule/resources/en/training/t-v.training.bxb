@@ -1,0 +1,10 @@
+train (t-v0g355djswwt8ii45h5wb92z8) {
+  utterance ("[g:RecallResponse] recall how many (cookies were in the jar)[v:RecallInputConcept]")
+  plan (Y2BmkCxLzNPLTc3NL6rUC0pNTszJCUotLsjPK05lEMeQckwuyczPY5DFkPDMKygtcc7PS04tKGFgYmAEYgYgycgAAkwQDAA=)
+  last-modified (1560439343445)
+}
+train (t-vch6bwj27pgpc2beglc8z1kp0) {
+  utterance ([g:DeleteAllAction] forget everything)
+  plan (Y2BikClLzNPLTc3NL6rUc0nNSS1JdczJCUotLsjPK05lkMIm65hckpmfx8AIhAxQDCQB)
+  last-modified (1558389076014)
+}

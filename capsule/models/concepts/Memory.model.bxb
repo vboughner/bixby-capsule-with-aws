@@ -1,0 +1,15 @@
+structure (Memory) {
+  description (describes a single memory)
+  property (text) {
+    type (MemoryText)
+    min (Required) max (One)
+  }
+  property (whenStored) {
+    type (MemoryWhenStored)
+    min (Required) max (One)
+  }
+  property (howLongAgo) {
+    type (MemoryHowLongAgo)
+    min (Required) max (One)
+  }
+}

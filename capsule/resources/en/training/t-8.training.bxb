@@ -1,0 +1,5 @@
+train (t-8qywroibpi4zjq93rt1bgyu41) {
+  utterance ("[g:RecallResponse] recall when is (symons birthday)[v:RecallInputConcept]")
+  plan (Y2BmkCxLzNPLTc3NL6rUC0pNTszJCUotLsjPK05lEMeQckwuyczPY5DFkPDMKygtcc7PS04tKGFgYmAEYgYgycgAAkwQDAA=)
+  last-modified (1560439048077)
+}

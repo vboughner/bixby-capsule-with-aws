@@ -1,0 +1,5 @@
+train (t-trcx8wldswen5ic3kxu4rkiap) {
+  utterance ("[g:MemorizeResponse] remember to (leave out the final comma before an and)[v:MemorizeInputConcept]")
+  plan (Y2BmkC5LzNPLTc3NL6rU8wVRmVWpQanFBfl5xakMklgkHZNLMvPzGOSxSHnmFZSWOOfnJacWlDAwMTACMQOQZGQAASYIBgA=)
+  last-modified (1561763264462)
+}

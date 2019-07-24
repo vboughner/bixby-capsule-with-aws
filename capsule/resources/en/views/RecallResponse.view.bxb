@@ -1,0 +1,30 @@
+result-view {
+  match: RecallResponse (this) {
+  }
+
+  message {
+    if (size (this.memories) < 2) {
+      template ("#{value(this.speech)}")
+    } else {
+      template ("#{value(this.speech)} Here are all memories that sound similar:")
+    }
+  }
+
+  render {
+    list-of (this.memories) {
+      where-each (item) {
+        layout-macro (memory-summary) {
+          param (memory) {
+            expression (item)
+          }
+        }
+      }
+    }
+  }
+
+  conversation-drivers {
+    conversation-driver {
+      template ("List all memories")
+    }
+  }
+}

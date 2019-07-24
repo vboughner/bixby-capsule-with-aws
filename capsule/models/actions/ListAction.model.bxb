@@ -1,0 +1,7 @@
+action (ListAction) {
+  type (Search)
+  description (lists every memory in the database)
+  collect {
+  }
+  output (ListResponse)
+}

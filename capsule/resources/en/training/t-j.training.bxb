@@ -1,0 +1,15 @@
+train (t-jdzm128v5w8rp5z57oe8nhm9i) {
+  utterance ("[g:MemorizeResponse] memorize (my mothers birthday is april 22nd)[v:MemorizeInputConcept]")
+  plan (Y2BmkC5LzNPLTc3NL6rU8wVRmVWpQanFBfl5xakMklgkHZNLMvPzGOSxSHnmFZSWOOfnJacWlDAwMTACMQOQZGQAASYIBgA=)
+  last-modified (1560439167904)
+}
+train (t-jva2expzh35idai5igw9uvb3v) {
+  utterance ("[g:RecallResponse] how many (calories does a banana have)[v:RecallInputConcept]")
+  plan (Y2BmkCxLzNPLTc3NL6rUC0pNTszJCUotLsjPK05lEMeQckwuyczPY5DFkPDMKygtcc7PS04tKGFgYmAEYgYgycgAAkwQDAA=)
+  last-modified (1557793116150)
+}
+train (t-jvi6i3anjuj2kybu1ngcw2hn8) {
+  utterance ("[g:MemorizeResponse] remember that (I need to buy potatoes)[v:MemorizeInputConcept]")
+  plan (Y2BmkC5LzNPLTc3NL6rU8wVRmVWpQanFBfl5xakMklgkHZNLMvPzGOSxSHnmFZSWOOfnJacWlDAwMTACMQOQZGQAASYIBgA=)
+  last-modified (1560439562936)
+}

@@ -1,0 +1,11 @@
+action (RecallAction) {
+  type (Search)
+  collect {
+    input (recallInput) {
+      type (RecallInputConcept)
+      min (Required) max (One)
+    }
+  }
+  description (Bixby recalls something it memorized for you earlier)
+  output (RecallResponse)
+}

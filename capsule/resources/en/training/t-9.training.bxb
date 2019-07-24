@@ -1,0 +1,15 @@
+train (t-94q0n5e6bdga1pkeeowc01efk) {
+  utterance ([g:DeleteSomeAction:continue:RecallResponse] delete this memory)
+  plan (Y2BmkC1LzNPLTc3NL6rUc0nNSS1JDc7PTQ1KLS7IzytOZZDGKu2YXJKZn8cgiSQZlJqcmJMD18fEwAjEDECSkYEBRgMA)
+  last-modified (1560530076768)
+}
+train (t-9bp2i2yh0q1eh04jhdkt42qtk) {
+  utterance ("[g:RecallResponse] when is (davids birthday)[v:RecallInputConcept]")
+  plan (Y2BmkCxLzNPLTc3NL6rUC0pNTszJCUotLsjPK05lEMeQckwuyczPY5DFkPDMKygtcc7PS04tKGFgYmAEYgYgycgAAkwQDAA=)
+  last-modified (1557791055852)
+}
+train (t-9n4gwb5vhzf2bz981mbgra343) {
+  utterance ("[g:RecallResponse] recall who is (coming to thanksgiving dinner)[v:RecallInputConcept]")
+  plan (Y2BmkCxLzNPLTc3NL6rUC0pNTszJCUotLsjPK05lEMeQckwuyczPY5DFkPDMKygtcc7PS04tKGFgYmAEYgYgycgAAkwQDAA=)
+  last-modified (1556659693142)
+}

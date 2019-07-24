@@ -1,0 +1,3 @@
+text (DeleteAllResponse) {
+  description (resulting output from deleting all memories)
+}

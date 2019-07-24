@@ -1,0 +1,15 @@
+train (t-k1r6uxishqm5poskyiuuvlu3d) {
+  utterance ("[g:RecallResponse] recall what I said about (march 29th)[v:RecallInputConcept]")
+  plan (Y2BmkCxLzNPLTc3NL6rUC0pNTszJCUotLsjPK05lEMeQckwuyczPY5DFkPDMKygtcc7PS04tKGFgYmAEYgYgycgAAkwQDAA=)
+  last-modified (1560439193942)
+}
+train (t-kad25oodiqy2t3pi3xanzpv5e) {
+  utterance ([g:DeleteAllAction:continue:ListResponse] delete this memory)
+  plan (Y2BikClLzNPLTc3NL6rUc0nNSS1JdczJCUotLsjPK05lkMIm65hckpmfx8AIhAxQDCQB)
+  last-modified (1562009868872)
+}
+train (t-kjm46qlyasjguqlimjwkg3ydk) {
+  utterance ("[g:RecallResponse] who is (davids sister)[v:RecallInputConcept]")
+  plan (Y2BmkCxLzNPLTc3NL6rUC0pNTszJCUotLsjPK05lEMeQckwuyczPY5DFkPDMKygtcc7PS04tKGFgYmAEYgYgycgAAkwQDAA=)
+  last-modified (1556659723863)
+}

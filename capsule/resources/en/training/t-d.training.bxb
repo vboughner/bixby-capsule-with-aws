@@ -1,0 +1,5 @@
+train (t-d69ft3nmyh694vyvfn1sp44uf) {
+  utterance ([g:ListResponse] list all memories)
+  plan (Y2BkEC9LzNPLTc3NL6rU88ksLglKLS7IzytOZQABRhABAA==)
+  last-modified (1557961967461)
+}

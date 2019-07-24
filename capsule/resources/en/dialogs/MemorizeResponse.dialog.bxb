@@ -1,0 +1,6 @@
+dialog (Progress) {
+  match {
+    MemorizeResponse
+  }
+  template("")
+}

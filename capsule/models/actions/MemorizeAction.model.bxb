@@ -1,0 +1,11 @@
+action (MemorizeAction) {
+  type (Fetch)
+  collect {
+    input (memorizeInput) {
+      type (MemorizeInputConcept)
+      min (Required) max (One)
+    }
+  }
+  description (Bixby memorizes the given input)
+  output (MemorizeResponse)
+}

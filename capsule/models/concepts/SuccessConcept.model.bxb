@@ -1,0 +1,3 @@
+boolean (SuccessConcept) {
+  description (Indicates if an operation was successful)
+}

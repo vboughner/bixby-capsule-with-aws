@@ -1,0 +1,29 @@
+result-view {
+  match: ListResponse (this) {
+    min (Required) max (One)
+  }
+
+  message {
+    template ("#{value(this.speech)}")
+  }
+
+  render {
+    list-of (this.memories) {
+      where-each (item) {
+        layout-macro (memory-summary) {
+          param (memory) {
+            expression (item)
+          }
+        }
+      }
+    }
+  }
+
+  conversation-drivers {
+    if (size (this.memories) > 0) {
+      conversation-driver {
+        template ("Delete all memories")
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+train (t-x0ujpq3k27xmtzvk8swv7l19g) {
+  utterance ("[g:RecallResponse] tell me the (magic number that sam picked)[v:RecallInputConcept]")
+  plan (Y2BmkCxLzNPLTc3NL6rUC0pNTszJCUotLsjPK05lEMeQckwuyczPY5DFkPDMKygtcc7PS04tKGFgYmAEYgYgycgAAkwQDAA=)
+  last-modified (1558028427484)
+}
+train (t-x1plu7zvz6e0guaucbvu6kow8) {
+  utterance ("[g:MemorizeResponse] remember that (i took my medication)[v:MemorizeInputConcept]")
+  plan (Y2BmkC5LzNPLTc3NL6rU8wVRmVWpQanFBfl5xakMklgkHZNLMvPzGOSxSHnmFZSWOOfnJacWlDAwMTACMQOQZGQAASYIBgA=)
+  last-modified (1556659281210)
+}
+train (t-xebesz9h97nnqqwckol52ycqx) {
+  utterance ("[g:RecallResponse] what (number did sam pick)[v:RecallInputConcept]")
+  plan (Y2BmkCxLzNPLTc3NL6rUC0pNTszJCUotLsjPK05lEMeQckwuyczPY5DFkPDMKygtcc7PS04tKGFgYmAEYgYgycgAAkwQDAA=)
+  last-modified (1558028381794)
+}
+train (t-xhxbwygf4s9yeej79cdwwpw4q) {
+  utterance ("[g:RecallResponse] is there a (5 oclock bus)[v:RecallInputConcept]")
+  plan (Y2BmkCxLzNPLTc3NL6rUC0pNTszJCUotLsjPK05lEMeQckwuyczPY5DFkPDMKygtcc7PS04tKGFgYmAEYgYgycgAAkwQDAA=)
+  last-modified (1557796416138)
+}
+train (t-xq9nf6188rtow5kb92qimro1a) {
+  utterance ([g:ListResponse] tell me my memories)
+  plan (Y2BkEC9LzNPLTc3NL6rU88ksLglKLS7IzytOZQABRhABAA==)
+  last-modified (1561766912501)
+}
+train (t-xv9iwpsoxwb8fbaia9zz0kyow) {
+  utterance ([g:ListResponse] list every memory)
+  plan (Y2BkEC9LzNPLTc3NL6rU88ksLglKLS7IzytOZQABRhABAA==)
+  last-modified (1558456855287)
+}

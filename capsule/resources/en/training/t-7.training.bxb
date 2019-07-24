@@ -1,0 +1,10 @@
+train (t-73edehgpaw7ufika4f3u2ex7b) {
+  utterance ([g:RecallLastMemoryResponse] what is the last thing you remember)
+  plan (Y2BkUC5LzNPLTc3NL6rUC0pNTszJ8UksLvEFCwSlFhfk5xWnMoAAI4gAAA==)
+  last-modified (1562023533044)
+}
+train (t-7zucmcmyzlondinp1yjr9n0t0) {
+  utterance ("[g:RecallResponse] what is (my mother's birthday)[v:RecallInputConcept]")
+  plan (Y2BmkCxLzNPLTc3NL6rUC0pNTszJCUotLsjPK05lEMeQckwuyczPY5DFkPDMKygtcc7PS04tKGFgYmAEYgYgycgAAkwQDAA=)
+  last-modified (1560440291532)
+}

@@ -1,0 +1,3 @@
+text (RecallInputConcept) {
+  description (sentence to be used in a search when recalling a memory)
+}

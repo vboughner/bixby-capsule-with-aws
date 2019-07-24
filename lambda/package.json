@@ -1,0 +1,20 @@
+{
+  "name": "lambda",
+  "version": "1.0.0",
+  "description": "Lambda for interacting with a Bixby Capsule",
+  "main": "index.js",
+  "scripts": {
+    "deploy":"./deploy.sh",
+    "postinstall": "cd src && yarn install",
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vboughner/bixby-capsule-with-aws.git"
+  },
+  "author": "Van A. Boughner",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/vboughner/bixby-capsule-with-aws/issues"
+  },
+  "homepage": "https://github.com/vboughner/bixby-capsule-with-aws#readme"
+}

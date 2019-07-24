@@ -1,0 +1,4 @@
+boolean (DeleteConfirmation) {
+  description (The confirmation boolean used for confirming a delete action)
+  extends (viv.core.Confirmation)
+}

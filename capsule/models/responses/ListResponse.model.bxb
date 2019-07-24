@@ -1,0 +1,15 @@
+structure (ListResponse) {
+  description (content of all memories in the database)
+  property (success) {
+    type (SuccessConcept)
+    min (Required) max (One)
+  }
+  property (speech) {
+    type (SpeechConcept)
+    min (Required) max (One)
+  }
+  property (memories) {
+    type (Memory)
+    min (Optional) max (Many)
+  }
+}

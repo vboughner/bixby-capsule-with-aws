@@ -1,0 +1,10 @@
+train (t-bcvd6p92azykyw61ej055oedu) {
+  utterance ("[g:DeleteConfirmation:prompt] (Yes)[v:DeleteConfirmation:true] please")
+  plan (Y2BikC1LzNPLTc3NL6rUc0nNSS1Jdc7PS8ssyk0syczPIyTNCIQMDDxAzATEQDYA)
+  last-modified (1561931957355)
+}
+train (t-bz6a04ouxpnvehcrhiemiaxko) {
+  utterance ("[g:RecallResponse] recall what is (my mother's birthday)[v:RecallInputConcept]")
+  plan (Y2BmkCxLzNPLTc3NL6rUC0pNTszJCUotLsjPK05lEMeQckwuyczPY5DFkPDMKygtcc7PS04tKGFgYmAEYgYgycgAAkwQDAA=)
+  last-modified (1556659340009)
+}

@@ -1,0 +1,8 @@
+action (DeleteAllAction) {
+  type (Commit)
+  description (Bixby deletes all memories)
+  confirm {
+    by (DeleteConfirmation)
+  }
+  output (DeleteAllResponse)
+}

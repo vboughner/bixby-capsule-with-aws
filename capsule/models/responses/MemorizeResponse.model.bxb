@@ -1,0 +1,15 @@
+structure (MemorizeResponse) {
+  description (The resulting output after memorizing something)
+  property (success) {
+    type (SuccessConcept)
+    min (Required) max (One)
+  }
+  property (speech) {
+    type (SpeechConcept)
+    min (Required) max (One)
+  }
+  property (memories) {
+    type (Memory)
+    min (Optional) max (Many)
+  }
+}

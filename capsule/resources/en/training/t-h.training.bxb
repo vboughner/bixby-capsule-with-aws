@@ -1,0 +1,5 @@
+train (t-h252ku2xq663x455gl4watsev) {
+  utterance ([g:DeleteOneResponse:continue:Memory] delete this memory)
+  plan (Y2BkkClLzNPLTc3NL6rUc0nNSS1J9c9LDUotLsjPK05lAAFGEAEA)
+  last-modified (1560475248585)
+}

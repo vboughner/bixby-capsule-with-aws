@@ -1,0 +1,3 @@
+text (SpeechConcept) {
+  description (Indicates the speech associated with an operation)
+}

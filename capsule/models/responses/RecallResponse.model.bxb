@@ -1,0 +1,19 @@
+structure (RecallResponse) {
+  description (The resulting output after recalling something)
+  property (success) {
+    type (SuccessConcept)
+    min (Required) max (One)
+  }
+  property (question) {
+    type (RecallInputConcept)
+    min (Required) max (One)
+  }
+  property (speech) {
+    type (SpeechConcept)
+    min (Required) max (One)
+  }
+  property (memories) {
+    type (Memory)
+    min (Optional) max (Many)
+  }
+}

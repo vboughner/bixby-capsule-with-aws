@@ -1,0 +1,17 @@
+{
+  "name": "lambda-src",
+  "version": "1.0.0",
+  "description": "Source code for lambda that handles interactions between Bixby and DynamoDB.",
+  "main": "index.js",
+  "scripts": {
+  },
+  "author": "Van A. Boughner",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "aws-sdk": "^2.203.0",
+    "fuse.js": "^3.2.0",
+    "moment": "^2.21.0",
+    "semver": "^6.0.0"
+  },
+  "devDependencies": {}
+}

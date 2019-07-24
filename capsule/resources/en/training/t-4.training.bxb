@@ -1,0 +1,15 @@
+train (t-47fi2fa83s5xiisl1xnee45w7) {
+  utterance ("[g:RecallResponse] how hot should I (cook lasagna)[v:RecallInputConcept]")
+  plan (Y2BmkCxLzNPLTc3NL6rUC0pNTszJCUotLsjPK05lEMeQckwuyczPY5DFkPDMKygtcc7PS04tKGFgYmAEYgYgycgAAkwQDAA=)
+  last-modified (1560438987634)
+}
+train (t-4gol4by9vid2hujehjadbcda3) {
+  utterance ("[g:DeleteConfirmation:prompt] (Do not do it)[v:DeleteConfirmation:false]")
+  plan (Y2BikC1LzNPLTc3NL6rUc0nNSS1Jdc7PS8ssyk0syczPIyTNCIQMDDxAzATEQDYA)
+  last-modified (1561931915629)
+}
+train (t-4ph3pnqwge8drdbab05k97r0f) {
+  utterance ([g:ListResponse] how many memories)
+  plan (Y2BkEC9LzNPLTc3NL6rU88ksLglKLS7IzytOZQABRhABAA==)
+  last-modified (1559155984647)
+}

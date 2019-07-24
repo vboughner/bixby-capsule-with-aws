@@ -1,0 +1,10 @@
+train (t-ailmxtkhy5yrhh5gm5226iuuv) {
+  utterance ("[g:DeleteConfirmation:prompt] (yes)[v:DeleteConfirmation:true]")
+  plan (Y2BikC1LzNPLTc3NL6rUc0nNSS1Jdc7PS8ssyk0syczPIyTNCIQMDDxAzATEQDYA)
+  last-modified (1561930713848)
+}
+train (t-ajbubssgy7v6dd8dprbxu4vlq) {
+  utterance ("[g:RecallResponse] when is the (vacation to disneyland)[v:RecallInputConcept]")
+  plan (Y2BmkCxLzNPLTc3NL6rUC0pNTszJCUotLsjPK05lEMeQckwuyczPY5DFkPDMKygtcc7PS04tKGFgYmAEYgYgycgAAkwQDAA=)
+  last-modified (1556660558992)
+}

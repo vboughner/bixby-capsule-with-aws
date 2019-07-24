@@ -1,0 +1,15 @@
+train (t-lg7p68w9vnwcpvfyi0pxtbfc3) {
+  utterance ("[g:RecallResponse] how many (seats are in the monterey movie theater)[v:RecallInputConcept]")
+  plan (Y2BmkCxLzNPLTc3NL6rUC0pNTszJCUotLsjPK05lEMeQckwuyczPY5DFkPDMKygtcc7PS04tKGFgYmAEYgYgycgAAkwQDAA=)
+  last-modified (1556659694102)
+}
+train (t-limjpz9rc0fcsr2hxds06729g) {
+  utterance ("[g:MemorizeResponse] remember (i put the cookies under the sink)[v:MemorizeInputConcept]")
+  plan (Y2BmkC5LzNPLTc3NL6rU8wVRmVWpQanFBfl5xakMklgkHZNLMvPzGOSxSHnmFZSWOOfnJacWlDAwMTACMQOQZGQAASYIBgA=)
+  last-modified (1556659279712)
+}
+train (t-lquwo6mmpvnvlj44frbzzdsrq) {
+  utterance ("[g:RecallResponse] tell me about (lasagna)[v:RecallInputConcept]")
+  plan (Y2BmkCxLzNPLTc3NL6rUC0pNTszJCUotLsjPK05lEMeQckwuyczPY5DFkPDMKygtcc7PS04tKGFgYmAEYgYgycgAAkwQDAA=)
+  last-modified (1557791711567)
+}

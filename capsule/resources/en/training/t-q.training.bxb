@@ -1,0 +1,10 @@
+train (t-q5pp5kgr8ylodycwjhsjb8y1t) {
+  utterance ("[g:RecallResponse] recall when is the (last day of school)[v:RecallInputConcept]")
+  plan (Y2BmkCxLzNPLTc3NL6rUC0pNTszJCUotLsjPK05lEMeQckwuyczPY5DFkPDMKygtcc7PS04tKGFgYmAEYgYgycgAAkwQDAA=)
+  last-modified (1560439314952)
+}
+train (t-qy6477e6l2b5z5fx45yyqik2b) {
+  utterance ("[g:MemorizeResponse] remember (my mother's birthday is January 22nd)[v:MemorizeInputConcept]")
+  plan (Y2BmkC5LzNPLTc3NL6rU8wVRmVWpQanFBfl5xakMklgkHZNLMvPzGOSxSHnmFZSWOOfnJacWlDAwMTACMQOQZGQAASYIBgA=)
+  last-modified (1560441432582)
+}

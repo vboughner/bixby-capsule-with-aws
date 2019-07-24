@@ -1,0 +1,10 @@
+train (t-23lqik10fmsm345ah8zu21zfs) {
+  utterance ([g:DeleteSomeAction:continue:RecallResponse] delete these memories)
+  plan (Y2BmkC1LzNPLTc3NL6rUc0nNSS1JDc7PTQ1KLS7IzytOZZDGKu2YXJKZn8cgiSQZlJqcmJMD18fEwAjEDECSkYEBRgMA)
+  last-modified (1560530066217)
+}
+train (t-2b5wnhj86cb6pv1e4ap7uuo7h) {
+  utterance ([g:DeleteJustMemorizedAction:continue:MemorizeResponse] delete this memory)
+  plan (Y2BmUCtLzNPLTc3NL6rUc0nNSS1J9SotLvEFCWRWpaYEpRYX5OcVpzKo4FfnmFySmZ/HII2kCiYHN4KJgRGIGYAkIwMDjAYA)
+  last-modified (1562023404923)
+}

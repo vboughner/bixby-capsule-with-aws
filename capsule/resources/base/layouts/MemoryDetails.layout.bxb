@@ -1,0 +1,42 @@
+layout-macro-def (memory-details) {
+  params {
+    param (memory) {
+      type (Memory)
+      min (Required) max (One)
+    }
+  }
+
+  content {
+    compound-card {
+      content {
+        image-card {
+          image-url ("head-brains.png")
+          aspect-ratio (1:1)
+          title-area {
+            halign (Start)
+            slot1 {
+              text {
+                value ("")
+                style (Title_M)
+              }
+            }
+          }
+        }
+        paragraph {
+          value {
+            template ("#{value(memory.text)}")
+          }
+          style (Title_S)
+        }
+        single-line {
+          text {
+            value {
+              template ("#{value(memory.howLongAgo)}")
+            }
+            style (Detail_L_Soft)
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,5 @@
+train (t-gakd5dr4zjqekz9pqxyi8ux62) {
+  utterance ("[g:RecallResponse] recall when (i took my medication)[v:RecallInputConcept]")
+  plan (Y2BmkCxLzNPLTc3NL6rUC0pNTszJCUotLsjPK05lEMeQckwuyczPY5DFkPDMKygtcc7PS04tKGFgYmAEYgYgycgAAkwQDAA=)
+  last-modified (1560439715681)
+}

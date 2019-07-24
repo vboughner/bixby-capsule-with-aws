@@ -1,0 +1,20 @@
+train (t-s3xneehohgub750y9lj1menbi) {
+  utterance ("[g:DeleteConfirmation:prompt] (Do it)[v:DeleteConfirmation:true]")
+  plan (Y2BikC1LzNPLTc3NL6rUc0nNSS1Jdc7PS8ssyk0syczPIyTNCIQMDDxAzATEQDYA)
+  last-modified (1561931888193)
+}
+train (t-sbaltsfmuclesxo3v9r5peo34) {
+  utterance ("[g:RecallResponse] what about (valentine's day)[v:RecallInputConcept]")
+  plan (Y2BmkCxLzNPLTc3NL6rUC0pNTszJCUotLsjPK05lEMeQckwuyczPY5DFkPDMKygtcc7PS04tKGFgYmAEYgYgycgAAkwQDAA=)
+  last-modified (1560441083967)
+}
+train (t-slr9b5v1sh9qosnocc9dajsad) {
+  utterance ([g:ListResponse] what are my memories)
+  plan (Y2BkEC9LzNPLTc3NL6rU88ksLglKLS7IzytOZQABRhABAA==)
+  last-modified (1561766928377)
+}
+train (t-sxmjh968aldd9m5hydse2h375) {
+  utterance ([g:ListResponse] show all memories)
+  plan (Y2BkEC9LzNPLTc3NL6rU88ksLglKLS7IzytOZQABRhABAA==)
+  last-modified (1560439327708)
+}

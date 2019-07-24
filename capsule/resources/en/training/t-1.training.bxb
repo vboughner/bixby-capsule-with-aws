@@ -1,0 +1,10 @@
+train (t-12cb1t07ohpo1lga1m0khh9ez) {
+  utterance ([g:RecallLastMemoryResponse] most recent memory)
+  plan (Y2BkUC5LzNPLTc3NL6rUC0pNTszJ8UksLvEFCwSlFhfk5xWnMoAAI4gAAA==)
+  last-modified (1562024210074)
+}
+train (t-14q85wvazgh385qv5886avrx0) {
+  utterance ("[g:RecallResponse] who has a (birthday in march)[v:RecallInputConcept]")
+  plan (Y2BmkCxLzNPLTc3NL6rUC0pNTszJCUotLsjPK05lEMeQckwuyczPY5DFkPDMKygtcc7PS04tKGFgYmAEYgYgycgAAkwQDAA=)
+  last-modified (1558394214820)
+}

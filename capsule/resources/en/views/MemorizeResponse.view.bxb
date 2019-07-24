@@ -1,0 +1,28 @@
+result-view {
+  match: MemorizeResponse (this) {
+  }
+
+  message ("#{value(this.speech)}")
+
+  render {
+    if (this.success) {
+      list-of (this.memories) {
+        where-each (item) {
+          layout-macro (memory-summary) {
+            param (memory) {
+              expression (item)
+            }
+          }
+        }
+      }
+    } else {
+      nothing
+    }
+  }
+
+  conversation-drivers {
+    conversation-driver {
+      template ("List all memories")
+    }
+  }
+}

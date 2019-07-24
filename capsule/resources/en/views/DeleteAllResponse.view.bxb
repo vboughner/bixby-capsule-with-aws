@@ -1,0 +1,10 @@
+result-view {
+  match: DeleteAllResponse (this) {
+  }
+
+  render {
+    nothing
+  }
+
+  message ("#{value(this)}")
+}

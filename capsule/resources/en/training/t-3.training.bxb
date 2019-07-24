@@ -1,0 +1,10 @@
+train (t-32v9jhb0q9on5ga4r8ffi3dv8) {
+  utterance ("[g:RecallResponse] recall when I said (I took my vitamins)[v:RecallInputConcept]")
+  plan (Y2BmkCxLzNPLTc3NL6rUC0pNTszJCUotLsjPK05lEMeQckwuyczPY5DFkPDMKygtcc7PS04tKGFgYmAEYgYgycgAAkwQDAA=)
+  last-modified (1560439698596)
+}
+train (t-3zmgz64ddrezayvd5c5kg6qlj) {
+  utterance ("[g:MemorizeResponse] remember (life is what you make of it)[v:MemorizeInputConcept]")
+  plan (Y2BmkC5LzNPLTc3NL6rU8wVRmVWpQanFBfl5xakMklgkHZNLMvPzGOSxSHnmFZSWOOfnJacWlDAwMTACMQOQZGQAASYIBgA=)
+  last-modified (1561763189099)
+}

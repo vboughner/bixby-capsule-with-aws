@@ -1,0 +1,17 @@
+hints {
+  uncategorized {
+    utterance ("Remember my mother's birthday is January 22nd")
+    utterance ("Recall my mother's birthday")
+    utterance ("Remember the cookies are in the back of the 2nd shelf on the right")
+    utterance ("Where did I put the cookies?")
+    utterance ("Remember that I took my vitamins")
+    utterance ("When did I take my vitamins?")
+    utterance ("Remember that I need to buy potatoes")
+    utterance ("What do I need to buy?")
+    utterance ("Delete these memories")
+    utterance ("What was the last memory?")
+    utterance ("How many memories are there?")
+    utterance ("List all memories")
+    utterance ("Delete all memories")
+  }
+}

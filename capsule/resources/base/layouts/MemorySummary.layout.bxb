@@ -1,0 +1,27 @@
+layout-macro-def (memory-summary) {
+  params {
+    param (memory) {
+      type (Memory)
+      min (Required) max (One)
+    }
+  }
+
+  content {
+    cell-card {
+      slot1 {
+        image {
+          url ("head-brains.png")
+          shape (Square)
+        }
+      }
+      slot2 {
+        content {
+          order (PrimarySecondary)
+          primary ("#{value(memory.text)}")
+          secondary ("#{value(memory.howLongAgo)}")
+        }
+      }
+    }
+  }
+}
+
