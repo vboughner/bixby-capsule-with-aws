@@ -1,7 +1,7 @@
 ## Maintain Your Capsule
 
 - make sure your prod is a stable version of the lambda
-- how to look at the logs
+- how to look at the CloudWatch logs
 - watch for the need to enlarge memory allocation
 - watch for the need to increase db throughput
 - how to rotate your secretClientApiKey

@@ -1,3 +1,8 @@
+If you just want to get the sample capsule working and are not ready to design your own capsule yet,
+you may skip this page, and move on to [setting up the Database](03-database-setup.md).
+
+Here are more steps to consider below, about how to design and plan your capsule.
+
 ## Design the Conversation
 
 Take some time to design the conversational user interface:
