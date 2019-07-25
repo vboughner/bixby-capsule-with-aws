@@ -1,12 +1,9 @@
 capsule-info {
-  display-name (My Brain)
-  developer-name (Van Boughner)
+  display-name (My Brain Tutorial)
+  developer-name (Capsule Tutorial Participant)
   icon-asset (head-brains.png)
   description ("Ask My Brain to remember things for you and recall them later. My Brain can help you remember things about people, where you put things, or when you last did something. It helps to include a couple of key words in your memory that you can use later in a question to recall it.")
   dispatch-name (My Brain)
-  dispatch-aliases {
-    alias (My Memory)
-  }
   privacy-policy-url (https://vanboughner.com/my-brain-privacy-policy-for-bixby)
   terms-url (https://vanboughner.com/my-brain-terms-of-service-for-bixby)
   website-url(https://vanboughner.com)
@@ -14,12 +11,5 @@ capsule-info {
     keyword (memory)
     keyword (remember)
     keyword (recall)
-  }
-  screenshots {
-    asset (screenshot1.png)
-    asset (screenshot2.png)
-    asset (screenshot3.png)
-    asset (screenshot4.png)
-    asset (screenshot5.png)
   }
 }

@@ -17,7 +17,6 @@ vocab(DeleteConfirmation) {
     "Do not do it"
     "Forget it"
     "Never mind"
-    "Cancel"
     "Nope"
     "No"
   }

@@ -1,0 +1,16 @@
+result-view {
+  match: DeleteOneResponse (this) {
+  }
+
+  render {
+    nothing
+  }
+
+  message ("#{value(this)}")
+
+  conversation-drivers {
+    conversation-driver {
+      template ("List all memories")
+    }
+  }
+}

@@ -19,5 +19,10 @@ endpoints {
        accepted-inputs ($vivContext)
        local-endpoint ("DeleteAllAction.js")
      }
+
+     action-endpoint (DeleteOneAction) {
+       accepted-inputs ($vivContext, memory)
+       local-endpoint ("DeleteOneAction.js")
+     }
   }
 }

@@ -8,11 +8,6 @@ train (t-cqu8asqhdqe6pmchtt14tkdw3) {
   plan (Y2BikClLzNPLTc3NL6rUc0nNSS1JdczJCUotLsjPK05lkMIm65hckpmfx8AIhAxQDCQB)
   last-modified (1560439108058)
 }
-train (t-cssuo4018sqok57948y1swqnk) {
-  utterance ([g:RecallLastMemoryResponse] what was the last memory stored)
-  plan (Y2BkUC5LzNPLTc3NL6rUC0pNTszJ8UksLvEFCwSlFhfk5xWnMoAAI4gAAA==)
-  last-modified (1562023509743)
-}
 train (t-cy3q7g593fn6auj4x15dkxoxp) {
   utterance ("[g:RecallResponse] recall (my phone number)[v:RecallInputConcept]")
   plan (Y2BmkCxLzNPLTc3NL6rUC0pNTszJCUotLsjPK05lEMeQckwuyczPY5DFkPDMKygtcc7PS04tKGFgYmAEYgYgycgAAkwQDAA=)

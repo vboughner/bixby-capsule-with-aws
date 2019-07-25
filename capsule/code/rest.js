@@ -11,9 +11,7 @@ rest.ACTION_TYPE_DELETE_ALL = 'delete-all'
 rest.ACTION_TYPE_DELETE_ONE = 'delete-one'
 
 /**
- * Looks up config and secret information stored in the Bixby Developer Center.
- *
- * @returns {{restApiUrl: *, secretClientApiKey: *}}
+ * Looks up config information stored in the Bixby Developer Center.
  */
 const getConfigAndSecrets = function() {
   const config = require('config');

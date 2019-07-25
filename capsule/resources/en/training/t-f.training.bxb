@@ -28,8 +28,3 @@ train (t-fwm2ag0qbll5ejje0ghw3x7bs) {
   plan (Y2BmkCxLzNPLTc3NL6rUC0pNTszJCUotLsjPK05lEMeQckwuyczPY5DFkPDMKygtcc7PS04tKGFgYmAEYgYgycgAAkwQDAA=)
   last-modified (1560440577397)
 }
-train (t-fxj43h33yn71nc2v9u0dcg0n4) {
-  utterance ([g:RecallLastMemoryResponse] what is the most recent memory)
-  plan (Y2BkUC5LzNPLTc3NL6rUC0pNTszJ8UksLvEFCwSlFhfk5xWnMoAAI4gAAA==)
-  last-modified (1559176095666)
-}

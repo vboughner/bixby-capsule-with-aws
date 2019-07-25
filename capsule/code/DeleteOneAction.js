@@ -7,7 +7,7 @@
  * @param {object} memory
  * @returns {string}
  */
-rest.deleteOne = function($vivContext, memory) {
+module.exports.function =  function($vivContext, memory) {
   const console = require('console')
   const rest = require("rest.js")
   if ($vivContext !== null && memory && memory.whenStored !== null) {

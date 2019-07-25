@@ -1,8 +1,3 @@
-train (t-6c53fbr3y8vr80sflqmf0no28) {
-  utterance ([g:VersionResponse] my brain lambda version)
-  plan (Y2BkkCpLzNPLTc3NL6rUC0stKs7MzwtKLS7IzytOZQABRhABAA==)
-  last-modified (1561933023721)
-}
 train (t-6tq8hxf5j9xvj4flk5xbetqc2) {
   utterance ("[g:RecallResponse] when does (my bus come)[v:RecallInputConcept]")
   plan (Y2BmkCxLzNPLTc3NL6rUC0pNTszJCUotLsjPK05lEMeQckwuyczPY5DFkPDMKygtcc7PS04tKGFgYmAEYgYgycgAAkwQDAA=)
