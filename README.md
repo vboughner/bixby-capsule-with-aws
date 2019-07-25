@@ -6,8 +6,8 @@ This is a tutorial repository, that you may freely clone to create a new Bixby C
 code, and will show you how to create a Bixby capsule that uses Amazon Web Services for its cloud storage.
 AWS provides a certain amount of computing resources and storage for free, and is quickly scalable.
 
-If you don't already have an AWS account, skip ahead to that step and [request one now](docs/01-request-aws-account.md). It take 24 hours
-to be completely ready, and trying to use DynamoDB before then can lead to unexpected errors.
+If you don't already have an AWS account, skip ahead to that step and [request one now](docs/01-request-aws-account.md).
+It takes 24 hours to be completely ready, and trying to use DynamoDB before then can lead to unexpected errors.
 
 ## Capsule Architecture
 
@@ -26,8 +26,14 @@ a DynamoDB NoSQL database.
 
 ## Setting up Your Own Capsule
 
-Start by cloning this repository, as it provides some of the boilerplate code you'll need, and follow the step-by-step
-instructions in each of the following documents:
+Start by cloning this repository, as it provides boilerplate code you'll need to create an AWS Lambda and
+Bixby Capsule that work closely together. This tutorial contains simplified code from
+[My Brain Lambda](https://github.com/vboughner/brain-lambda) and
+[My Brain Capsule](https://github.com/vboughner/van.memory). It takes their basic functionality and combines
+it here in a simplified form. When you finish this tutorial, you'll have a working Bixby capsule,
+with storage in your own AWS account. From there you can modify it to create something new.
+
+Follow the step-by-step instructions in each of the following documents:
 - [Request an AWS Account](docs/01-request-aws-account.md)
 - [Design and Plan](docs/02-design-and-plan.md)
 - [Set up the Database](docs/03-database-setup.md)

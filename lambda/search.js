@@ -133,49 +133,8 @@ function searchThruDataForString(data, s) {
     });
 
     // console.log('DEBUG: sorted results are', sortedResults);
-    // console.log();
-
     return sortedResults;
 }
-
-
-// plain command line tests will use something like to execute this script:
-//     node search.js 'this is a test string'
-//
-/*
-if (process && process.argv && process.argv.length > 1) {
-
-    let mockdata = [
-        {"UserId":"cmdlineuser","WhenStored":"1519920819210","Text":"i put tape under the door frame"},
-        {"UserId":"cmdlineuser","WhenStored":"1519920819212","Text":"i put tape under the door"},
-        {"UserId":"cmdlineuser","WhenStored":"1519920819213","Text":"i put tape under the door"},
-        {"UserId":"cmdlineuser","WhenStored":"1519920819214","Text":"i put tape under the door"},
-        {"UserId":"cmdlineuser","WhenStored":"1519920829215","Text":"fred's phone number is four five two three three nine four"},
-        {"UserId":"cmdlineuser","WhenStored":"1520056342330","Text":"i've become increasingly concerned"},
-        {"UserId":"cmdlineuser","WhenStored":"1520056343331","Text":"i took my medication this morning"},
-        {"UserId":"cmdlineuser","WhenStored":"1520056344332","Text":"i hid the cookies on the bottom shelf"},
-        {"UserId":"cmdlineuser","WhenStored":"1520056345334","Text":"susan washed the car"},
-        {"UserId":"cmdlineuser","WhenStored":"1520056358968","Text":"There are three boxes of copy paper"},
-        {"UserId":"cmdlineuser","WhenStored":"1520180339761","Text":"this is a statement about bananas and tomatoes dont eat them together"}
-    ];
-
-    process.argv.forEach(function (val, index, array) {
-        console.log(index + ': ' + val);
-        if (index > 1) {
-            let response = searchThruDataForString(mockdata, process.argv[2]);
-            console.log('   ' + JSON.stringify(response));
-            console.log();
-            if (response.length > 0) {
-                console.log('BEST MATCH: ' + response[0].Text);
-            }
-            else {
-                console.log('NO GOOD MATCHES');
-            }
-            console.log();
-        }
-    });
-}
-*/
 
 // noinspection JSUnresolvedVariable
 module.exports = {

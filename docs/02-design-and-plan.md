@@ -17,11 +17,13 @@ You'll need to determine where the work should happen, I suggest:
 
 When originally designing My Brain capsule, I tried to place almost everything in the cloud.
 Later I realized that there is a great deal of help in Bixby for handling interaction and dialog that
-needs to be different under various circumstances (singular or plural responses, for example).
+needs to be different under various circumstances (singular or plural responses, for example). So you
+may find that some of the text generation that is going on within the lambda
+is unnecessary and could be moved to the capsule code.
 
 At the same time, if you find yourself writing a lot JavaScript code in the capsule to handle some problem,
 it's best to move that work in the cloud. The AWS Lambda lets you use Node 10, with modern JavaScript language,
-and you'll have convenient access to the data your capsule stores.
+and you'll have convenient access there to the data that your capsule stores.
 
 ## Plan for your Data Storage
 
@@ -49,6 +51,15 @@ For performance reasons, it's best if what you need from the table can be retrie
 query, rather than scanning your entire table, see
 [Best Practices for Querying and Scanning Data](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/bp-query-scan.html).
 
+The sample memory capsule in this tutorial stores the following object, on each table row in the database:
+```$js
+{
+  userId: 'unqiue-user-id-string',
+  whenStored: numeric-timestamp,
+  text: 'string-text-of-memory-stored'
+}
+```
+
 ## Design a Simple API
 
 The API for communicating between the capsule and the cloud suggested here uses HTTPS and REST.
@@ -60,5 +71,27 @@ a GET request commonly are.
 Take a moment to write some JSON that describes:
 - what must be in every request (action type and arguments, secretClientApiKey, clientVersion, etc.)
 - what will be in every response (success flag / error messages, serverVersion, query results, etc.)
+
+In this sample capsule, every request from the capsule to the lambda must contain these properties:
+```$js
+{
+  clientVersion: '1.0.0',
+  secretClientApiKey: 'secret-key-stored-in-dev-center',
+  actionType: 'which-action-to-take',
+```
+
+Using an `actionType` to specify what action is desired means that we only have to provide a single POST endpoint,
+which simplifies API Gateway maintenance. Other parameters required by the action can be added to this object.
+
+And every response from the server contains at least the following:
+```$js
+{
+  serverVersion: '1.0.0',
+  success: true/false,
+  speech: 'suggested speech for this operation'
+```
+
+Other fields will be added to the response depending on the results being returned.
+The client and server version number passing helps with maintenance of a capsule that is in production.
 
 Next: [Set up the Database](03-database-setup.md)

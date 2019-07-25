@@ -6,7 +6,7 @@ const storeTable = 'MyBrainLines';
 const maxBatchOperations = 25;    // you get an error with too many batch operations at once
 
 // load everything from memory in the db for this user, returns the array of data items
-async function loadMemories(userId, deviceId) {
+async function loadMemories(userId) {
     return new Promise((resolve, reject) => {
         let params = {
             TableName: storeTable,
@@ -38,14 +38,13 @@ async function loadMemories(userId, deviceId) {
 
 // store a line of text in the db, returns an object describing what was stored,
 // or null if not successfully stored
-async function storeMemory(userId, deviceId, text) {
+async function storeMemory(userId, text) {
     return new Promise((resolve, reject) => {
         let when = Date.now().toString();
         let params = {
             TableName: storeTable,
             Item: {
                 UserId: userId,
-                DeviceId: deviceId,
                 WhenStored: when,
                 Text: text
             }
@@ -137,8 +136,8 @@ async function eraseMemoriesByBatchWithPromise(batchItemArray) {
 
 // remove all memories for a user from the database,
 // call the callback when done, return true if successful, false if not successful
-async function eraseAllMemories(userId, deviceId) {
-    const items = await loadMemories(userId, deviceId);
+async function eraseAllMemories(userId) {
+    const items = await loadMemories(userId);
     if (items && items.length > 0) {
         let batchItemArray = [];
         for (let i = 0; i < items.length; i++) {

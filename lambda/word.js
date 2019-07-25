@@ -4,7 +4,7 @@
 // cut out punctuation, because we want it stored as it appears (later when we are searching, we'll make some
 // adjustments to the question search words, to make them all lower case and strip out punctuation)
 function cleanUpResponseText(text) {
-    return text.trim();
+    return text ? text.trim() : '';
 }
 
 // will be used in order, to trim words from the beginning of questions, order matters, as they will be
