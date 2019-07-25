@@ -6,7 +6,7 @@ const Fuse = require('fuse.js');
 const minWordLength = 3;
 const maxWordLength = 32;
 const fuseSearchOptions = {
-    keys: ['Text'],
+    keys: ['text'],
     shouldSort: true,
     threshold: 0.3,
     location: 0,
@@ -59,22 +59,22 @@ const everythingWords = [
 ]
 
 // expects data in a format where there is an array of objects,
-// the 'Text' attribute of each object is the one to search,
-// and 'WhenStored' is expected to be unique (for this user),
+// the 'text' attribute of each object is the one to search,
+// and 'whenStored' is expected to be unique (for this user),
 // something like this:
 //
 // [
 //     {
-//         UserId: 'cmdlineuser',
-//         WhenStored: '1520180339761',
-//         Text: 'this is a statement about bananas and tomatoes dont eat them together'
+//         userId: 'cmdlineuser',
+//         whenStored: '1520180339761',
+//         text: 'this is a statement about bananas and tomatoes dont eat them together'
 //     },
 //     <etc>
 // ]
 //
 // The results will include an array of objects, that looks like the original
 // objects, but contains only those elements in the data that match a search,
-// and you can expect that there will be an additional element added, called 'Score',
+// and you can expect that there will be an additional element added, called 'score',
 // that is a sibling of the 'Text' attribute, which is a positive integer,
 // and is number of words in the search string that had good results for a match
 // with the data. Your best result will be the one with the highest score,
@@ -94,8 +94,8 @@ function searchThruDataForString(data, s) {
     // if this actually looks like a request for everything, feed all results back
     if (data && (words.length === 0 || (words.length === 1 && everythingWords.indexOf(words[0]) !== -1))) {
         for (let i = 0; i < data.length; i++) {
-            hashedResults[data[i].WhenStored] = data[i];
-            hashedResults[data[i].WhenStored].Score = 1;
+            hashedResults[data[i].whenStored] = data[i];
+            hashedResults[data[i].whenStored].score = 1;
         }
     } else {
         // otherwise search for significant words in every entry and keep score for every word
@@ -105,11 +105,11 @@ function searchThruDataForString(data, s) {
             // console.log(wordResult);
             for (let r = 0; r < wordResult.length; r++) {
                 // put this result somewhere so we can count it
-                if (hashedResults[wordResult[r].WhenStored]) {
-                    hashedResults[wordResult[r].WhenStored].Score++;
+                if (hashedResults[wordResult[r].whenStored]) {
+                    hashedResults[wordResult[r].whenStored].score++;
                 } else {
-                    hashedResults[wordResult[r].WhenStored] = wordResult[r];
-                    hashedResults[wordResult[r].WhenStored].Score = 1;
+                    hashedResults[wordResult[r].whenStored] = wordResult[r];
+                    hashedResults[wordResult[r].whenStored].score = 1;
                 }
             }
         }
@@ -123,9 +123,9 @@ function searchThruDataForString(data, s) {
         }
     }
     sortedResults.sort(function (a, b) {
-        const score = b.Score - a.Score;
+        const score = b.score - a.score;
         if (score === 0) {
-            return b.WhenStored - a.WhenStored;
+            return b.whenStored - a.whenStored;
         }
         else {
             return score;

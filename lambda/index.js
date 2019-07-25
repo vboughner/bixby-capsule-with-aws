@@ -110,11 +110,11 @@ async function recallForQuestion(userId, text) {
         for (let i = 0; i < bestMemories.length; i++) {
             const selectedMemory = bestMemories[i];
             response.answers[i] = {
-                text: selectedMemory.Text,
-                whenStored: selectedMemory.WhenStored,
-                userId: selectedMemory.UserId,
-                score: selectedMemory.Score,
-                howLongAgo: timeModule.getHowLongAgoText(Number(selectedMemory.WhenStored)),
+                text: selectedMemory.text,
+                whenStored: selectedMemory.whenStored,
+                userId: selectedMemory.userId,
+                score: selectedMemory.score,
+                howLongAgo: timeModule.getHowLongAgoText(Number(selectedMemory.whenStored)),
             };
         }
         response.success = true;
@@ -137,10 +137,10 @@ async function memorizeStatement(userId, text) {
         const item = await dbModule.storeMemory(userId, refinedText);
         if (item) {
             response.success = true;
-            response.text = item.Text;
-            response.whenStored = item.WhenStored;
-            response.userId = item.UserId;
-            response.howLongAgo = timeModule.getHowLongAgoText(Number(item.WhenStored)); // TODO: use locale
+            response.text = item.text;
+            response.whenStored = item.whenStored;
+            response.userId = item.userId;
+            response.howLongAgo = timeModule.getHowLongAgoText(Number(item.whenStored));
             response.speech = 'I will remember that you said: ' + refinedText + '.';
         }
         else {
@@ -165,11 +165,11 @@ async function getList(userId) {
         for (let i = recordedMemories.length - 1; i >= 0; i--) {
             const selectedMemory = recordedMemories[i];
             response.answers.push({
-                text: selectedMemory.Text,
-                whenStored: selectedMemory.WhenStored,
-                userId: selectedMemory.UserId,
-                score: selectedMemory.Score,
-                howLongAgo: timeModule.getHowLongAgoText(Number(selectedMemory.WhenStored)),
+                text: selectedMemory.text,
+                whenStored: selectedMemory.whenStored,
+                userId: selectedMemory.userId,
+                score: selectedMemory.score,
+                howLongAgo: timeModule.getHowLongAgoText(Number(selectedMemory.whenStored)),
             });
         }
         response.success = true;
@@ -186,8 +186,8 @@ async function getList(userId) {
 
 async function deleteOne(userId, whenStored) {
     const item = {
-        UserId: userId,
-        WhenStored: whenStored,
+        userId: userId,
+        whenStored: whenStored,
     }
     const success = await dbModule.eraseOneMemory(item);
     let response = {

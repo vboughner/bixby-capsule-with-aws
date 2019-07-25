@@ -12,7 +12,7 @@ async function loadMemories(userId) {
             TableName: storeTable,
             KeyConditionExpression: '#user = :uId',
             ExpressionAttributeNames: {
-                '#user': 'UserId'
+                '#user': 'userId'
             },
             ExpressionAttributeValues:  {
                 ':uId': userId
@@ -28,7 +28,7 @@ async function loadMemories(userId) {
             else {
                 // console.log('DEBUG: returned from query operation = ' + JSON.stringify(data));
                 // data.Items.forEach(function(item) {
-                //     console.log(" -", item.Text);
+                //     console.log(" -", item.text);
                 // });
                 resolve(data.Items);
             }
@@ -44,9 +44,9 @@ async function storeMemory(userId, text) {
         let params = {
             TableName: storeTable,
             Item: {
-                UserId: userId,
-                WhenStored: when,
-                Text: text
+                userId: userId,
+                whenStored: when,
+                text: text
             }
         };
         // console.log('DEBUG: storing with db params = ' + JSON.stringify(params));
@@ -70,8 +70,8 @@ async function eraseOneMemory(item) {
         let params = {
             TableName: storeTable,
             Key: {
-                'UserId': item.UserId,
-                'WhenStored': item.WhenStored.toString()
+                'userId': item.userId,
+                'whenStored': item.whenStored.toString()
             },
         };
         // console.log('DEBUG: deleting with db params = ' + JSON.stringify(params));
@@ -144,8 +144,8 @@ async function eraseAllMemories(userId) {
             let batchItem = {
                 DeleteRequest: {
                     Key: {
-                        'UserId': userId,
-                        'WhenStored': items[i].WhenStored
+                        userId: userId,
+                        whenStored: items[i].whenStored
                     }
                 }
             };
