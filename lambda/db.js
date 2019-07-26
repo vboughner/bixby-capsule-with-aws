@@ -2,7 +2,7 @@
 
 const awsSDK = require('aws-sdk');
 const docClient = new awsSDK.DynamoDB.DocumentClient({ region: 'us-east-1' });
-const storeTable = 'MyBrainLines';
+const storeTable = 'memories';
 const maxBatchOperations = 25;    // you get an error with too many batch operations at once
 
 // load everything from memory in the db for this user, returns the array of data items
