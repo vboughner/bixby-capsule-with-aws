@@ -3,7 +3,9 @@
 You'll need to start by creating a table for storing memories for the example capsule. Take the following steps:
 - log into the AWS Management Console and go to the [AWS DynamoDB Dashboard](https://console.aws.amazon.com/dynamodb)
 - look for the `Create table` button and click on it
-- you should see the Create DynamoDB table page (pictured below), you'll be entering something at each red arrow, please pay close attention to upper and lower case letters, because everything is case-sensitive
+- you should see the Create DynamoDB table page (pictured below), you'll be entering something at each red arrow,
+ please pay close attention to uppernand lower case letters, because everything is case-sensitive,
+ (and these table and field names match those in the file `lambda/db.js`)
 - enter `memories` for the Table name
 - enter `userId` for the Primary Partition key
 - check the `Add sort key` checkbox (which will reveal the sort key field)

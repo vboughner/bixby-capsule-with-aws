@@ -3,9 +3,7 @@
 - set up your API Gateway endpoint
 - make it call the lambda
 - make it organize the JSON data for you
-- set up stage environment variables for dev and prod
-- deploy the API Gateway for both stages
-- copy the dev url for API query
+- copy the api url and note it somewhere
 
 ## Test your API with Postman
 
