@@ -6,10 +6,6 @@ If you don't already have an AWS account, you'll need to request one 24 hours be
 time for it to finish setting up. You'll also need your own AWS credentials, and the AWS command line tools.
 That's something you can set up immediately, without waiting.
 
-If you try to access DynamoDB or Lambda early, you may see a web page that says
-"Your service sign-up is almost complete". That's normal, and you are likely still in the waiting period.
-No action is required, and when the waiting period is over, you'll receive another email. I received mine after 24 hours.
-
 Here's how to request an account:
 - go to [Amazon Web Services (AWS)](https://aws.amazon.com/) and click on `Create an AWS Account`
 - enter your email address, choose a password, pick an account name, and press `Continue`
@@ -21,12 +17,32 @@ Here's how to request an account:
 - use the email address and password you gave above to [sign into the root console](https://console.aws.amazon.com/)
 - in a few minutes, you'll receive an email acknowledging your activation
 
+If you try to access DynamoDB or Lambda immediately, you may see a web page that says
+"Your service sign-up is almost complete". That's normal during the first 24 hours when you are likely still in the
+waiting period. No action is required, when the waiting period is over, you'll receive another email that has the
+subject line "Your AWS Account is Ready - Get Started Now". I received mine after about 24 hours.
+
+On one occasion, I had not received that email after 3 days. So I pressed the `Contact Support` button in the
+Lambda service page. It lead me to a page called
+[How do I create and activate a new Amazon Web Services account?](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/)
+with a number of suggestions. Surprisingly, the suggestion that worked for me was to try logging in with a different
+browser. When I tried to log in again with Firefox, things started working. And when I went back to using chrome they
+continued to work.
+
 ## Set up Identity and Access Management
 
-It is recommended that you use your root console access only to
+There are two kinds of identity for logging into the AWS Management Console. The first is the
+root console login, which requires the email address and password that you signed up with, and you've got that kind of
+access now, if you followed the procedure above. The other is IAM access. That is with a new user you that create on
+your account in the Identity Access Management system, and you can create any number of identities like that on your
+account. When you login with IAM you use the IAM login page, and it requires an account number, username, and password. 
+
+It is recommended that you use your root console access to
 [create an IAM identity](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html#id_users_create_console)
 for yourself, and log in with the IAM identity on a regular basis, instead of using the root console. It provides
-better security management and allows you to add people to your team, and give them tailored access. Here's how:
+better security management and allows you to add people to your team, and give them tailored access.
+
+You can do this immediately, without waiting for 24 hours, here's how:
 - from AWS Management Console, type `IAM` in the Find Services search, go to [Identity and Access Management](https://console.aws.amazon.com/iam/home)
 - look for `Users` in the left sidebar and click on it (and that should take you [here](https://console.aws.amazon.com/iam/home?#/users))
 - press the blue `Add user` button at the top
@@ -44,6 +60,10 @@ better security management and allows you to add people to your team, and give t
 - bookmark the link that follows "Users with AWS Management Console access can sign-in at", you'll need it
 - remember the user name and password displayed on this screen, for when you log in using that console access link
 - that link, your IAM user name, and the password are also listed in the `.csv` file that you downloaded
+
+IAM users do no have automatic access to billing information, and you don't need it in this tutorial because you can
+access it later with your root login, but if you would like to do that form you IAM account as well, see
+[Granting Access to You Billing Information and Tools](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/grantaccess.html).
 
 ## Set up Command Line Tools
 
