@@ -117,4 +117,26 @@ This time when you press `Test` again, you should see output like this:
 Later, when we have the API Gateway working, we'll test like this again, using a tool called Postman.
 And the REST api should work just like this, with a similar body in the POST request.
 
+## Assigning Aliases for Development and Production
+
+One day, after your capsule is released to the marketplace, your lambda will be used by devices in production and will
+need a stable version. Let's create 2 release aliases for this lamba, one called `dev` and one called `prod`. For now,
+they will both point to the latest version of your lambda function, but later you'll be able to use it to lock down
+which version of your lambda is used in production (to keep things stable).
+
+Here's how to set up the 2 aliases:
+- choose the `Create alias` item from the `Actions` menu (see image below)
+- in the window for creating an alias, enter `dev`, `dev`, and choose the `LATEST` version
+- create the `Create` button
+- repeat the process again for, using `prod`, `prod`, and `LATEST`
+- when you are finished, you can view and choose which lambda version you are testing using the `Alias` dropdown
+
+![Choose Actions Menu](create-aliases-1.png)
+
+![Create Dev Alias](create-aliases-2.png)
+
+![Alias Dropdown Menu](create-aliases-3.png)
+
+Congratulations, your lambda is all set up!
+
 Next: [Configure the API Gateway](05-api-gateway-setup.md)
