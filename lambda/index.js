@@ -7,7 +7,7 @@ const dbModule = require('./db')
 const timeModule = require('./time')
 const error = require('./error.js')
 
-const SECRET_CLIENT_API_KEY = process.env['SECRET_CLIENT_API_KEY']
+const SECRET_CLIENT_API_KEY = process.env['secretClientApiKey']
 const CLIENT_VERSION_SEMVER_SATISFIES = '1.x'
 const SERVER_VERSION = '1.0.0'
 

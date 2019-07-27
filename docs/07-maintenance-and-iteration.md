@@ -17,6 +17,12 @@
 - update the dev and prod urls in the Bixby Developer Center
 - test with the Simulator and debugger to make sure you are using dev 
 - how to use dev and prod to iterate while in production
-- how to run and test your lambda code locally
+
+## How to Test Lambda Code Locally
+
+It is possible to run your lambda code locally by adding a few things designed for testing
+on the command line.
+
+TODO: place example cmdline.js file into the repo
 
 [Return to README](../README.md)

@@ -158,7 +158,6 @@ async function eraseAllMemories(userId) {
 
 // noinspection JSUnresolvedVariable
 module.exports = {
-    getMyBrainUserId: getMyBrainUserId,
     loadMemories: loadMemories,
     storeMemory: storeMemory,
     eraseOneMemory: eraseOneMemory,
