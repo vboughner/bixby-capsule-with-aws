@@ -48,7 +48,7 @@
 
 Now you may enter some NL into the Simulator window, try these statements:
 - remember that I parked on the third level in section B7
-- where did I park
+- tell me about where I parked
 - list all memories
 
 ![Simulator Natural Language](simulator-nl.png)

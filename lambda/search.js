@@ -66,7 +66,7 @@ const everythingWords = [
 // [
 //     {
 //         userId: 'cmdlineuser',
-//         whenStored: '1520180339761',
+//         whenStored: 1520180339761,
 //         text: 'this is a statement about bananas and tomatoes dont eat them together'
 //     },
 //     <etc>

@@ -40,7 +40,7 @@ async function loadMemories(userId) {
 // or null if not successfully stored
 async function storeMemory(userId, text) {
     return new Promise((resolve, reject) => {
-        let when = Date.now().toString();
+        let when = Date.now();
         let params = {
             TableName: storeTable,
             Item: {
@@ -71,7 +71,7 @@ async function eraseOneMemory(item) {
             TableName: storeTable,
             Key: {
                 'userId': item.userId,
-                'whenStored': item.whenStored.toString()
+                'whenStored': Number(item.whenStored)
             },
         };
         // console.log('DEBUG: deleting with db params = ' + JSON.stringify(params));
