@@ -1,13 +1,13 @@
 ## Set up an API Gateway
 
-You have a database now, and you've got a lambda, you'll need access to these from the outside. You'll build an
+You have a database now, and you've got a lambda, you'll need access to these from the outside. For this let's build an
 AWS API Gateway. This will expose a REST api to the outside that anyone can reach, if they know the url. In this
 tutorial you'll secure it with a secret client api key, so it will only respond to you. Everyone else gets
 an error if they try to use it.
 
 Also, we're going to create 2 different "stages" for your API Gateway, one called `dev` and one called `prod`. This will
-allow the API Gateway to execute a different version of your lambda function, depending on which url is used, as the
-dev and prod urls will be a little different. You'll use the `dev` and `prod` aliases you set up for your lambda in
+allow the API Gateway to execute a different version of your lambda function, depending on which url is used (as the
+dev and prod urls will be a little different). You'll use the `dev` and `prod` aliases you set up for your lambda in
 the last page of instructions.
 
 Having two different "stages" like this means that you can assign a stable version of your lambda for use in
@@ -114,17 +114,18 @@ Here's how:
 ![Deploy 4](deploy-4.png)
 
 - click on the `memory-api` -> `Resources` link in the sidebar
-- repeat the process above, but use `prod` everywhere instead of `dev`
+- **repeat the process above** to deploy another stage, but this time use `prod`, instead of `dev`
 
 When you are done, you will have two deployment stages, `dev` and `prod`, and each wil have a stage environment
 variable called `env` that has a value equal to the stage name.
 
 ## Make the Gateway API Dynamic
 
-Now you make the API Gateway call a different lambda alias, depending on which deployment stage is used.
-Try this:
+Now we'll make the API Gateway call a different version of the lambda, using an alias,
+depending on which deployment stage is used. Try this:
 - click on the `memory-api` -> `Resources` link in the sidebar (see image below)
-- expand the api service and click on the `POST` operation
+- expand the api service by clicking on the triangle
+- click on the `POST` operation
 - click on the `Integration Request` link 
 
 ![Dynamic Lambda Call 1](dynamic-lambda-call-1.png)
@@ -140,8 +141,8 @@ Try this:
 
 A popup window will appear, warning you that you need to give the API Gateway permission to call the lambda using both
 of the new aliases. Do the following:
-- copy the text from the red section into the clipboard (see image below)
-- note the new lambda function call (in the red rectangle in the image below)
+- copy all of the text from the pink background section into the clipboard (see image below, I've blocked out own account number)
+- note the location of the new lambda function call (the red rectangle in the image below)
 
 ![Dynamic Lambda Call 4](dynamic-lambda-call-4.png)
 
@@ -153,18 +154,18 @@ of the new aliases. Do the following:
 
 ![Dynamic Lambda Call 5](dynamic-lambda-call-5.png)
 
-## Test tha API calls the Lambda  
+## Test that the API calls the Lambda  
 
-You may test that the api calls the lambda properly for each stage by taking the following steps:
+You may test that the api calls the lambda properly for each stage, by taking the following steps:
 - click on the `memory-api` -> `Resources` link in the sidebar (see image below)
 - click in the `POST` method in the navigation sidebar
 - press the `Test` link
 
 ![Test with API 1](test-with-api-1.png)
 
-- enter `dev` for the value of the env state variable (see image below), or use `prod` if you like
+- enter `dev` for the value of the env state variable (see image below, you may use `prod` instead if you like)
 - enter the following JSON into the request body:
-```js
+```javascript
 {
   "secretClientApiKey": "my-client-key-0425-afgnrq-4fe6h1",
   "clientVersion": "1.0.0",
@@ -173,30 +174,30 @@ You may test that the api calls the lambda properly for each stage by taking the
 }
 ```
 - press the `Test` button
-- after the test runs, you'll be able to to see the output on the right of the image below, the response body should look similar to what you saw when you tested the lambda earlier
+- after the test runs, you'll be able to to see the output on the right of the image below, the Response Body should look similar to what you saw when you tested the lambda earlier
 
 ![Test with API 2](test-with-api-2.png)
 
-Note: the request body gets wrapped in a `body-json` object by the Gateway API mapping function. That's why the code
+Note: the request gets wrapped in a `body-json` object by the Gateway API mapping function. That's why the code
 in `index.js` looks for the request body within a `body-json` property. You may remember that When you tested from the
 lambda earlier, you needed to wrap the request with a `body-json` object. You don't need to do that when testing
-from the Gateway API, or when using the new REST api from the outside.
+from the Gateway API, nor when using the new REST api from the outside.
 
 ## Find for your REST API URL
 
-To figure out what the Urls are for accessing your api from outside AWS, look at the stage information:
+To find the url for accessing your api from outside AWS, look at the stage information:
 - click on the link in the left-most navigation bar that says `Stages`
 - click on `dev` or `prod`
-- note that the URL is displayed at the top, your's will have a different section at the front (that I blocked out in the image below)
+- note that the URL is displayed at the top (I blocked out the account identifier in the image below)
 
 ![Find API Url](find-api-url.png)
 
 To use the URL, you'll need to add a forward-slash and the name of the resource we added, which was `service`.
-And it can only be called with POST. Let's test it from outside AWS, in the next section.
+And it can only be called with POST. We'll test it from outside AWS, in the next section.
 
 ## Test your API with Postman
 
-It's best to test your REST api now, to any bugs worked out, before you try using it from a capsule. Try this:
+It's best to test your REST api now, to work out any bugs, before you try using it from a capsule. Try this:
 - download and install [Postman](https://www.getpostman.com/downloads/)
 - run Postman and click on the `Request` link in the welcome window to create a new request (see image below)
 
@@ -209,12 +210,12 @@ It's best to test your REST api now, to any bugs worked out, before you try usin
 ![Postman Test 2](postman-test-2.png)
 
 - on the new request page, where it says `GET`, choose `POST` instead for the operation type (see image below)
-- enter the URL for the Gateway API, remember to add `/service` to the URL you copy from the Gateway API page above
+- enter the URL for the Gateway API, remember to add `/service` to the URL that you copied from the Gateway API page above
 - click on the `Body` tab
 - under the body tab, click on `raw`
-- to tright of `raw`, where it says `Text`, choose `JSON (application/json)` from the dropdown menu instead
+- to the right of `raw`, where it says `Text`, choose `JSON (application/json)` from the dropdown menu instead
 - paste the same JSON data into this request that you used to test the Gateway API earlier:
-```js
+```javascript
 {
   "secretClientApiKey": "my-client-key-0425-afgnrq-4fe6h1",
   "clientVersion": "1.0.0",
@@ -233,7 +234,7 @@ You should see results like those below:
 
 ## References
 
-For more information about all of this, see these excellent articles that explain how all of this works in more detail:
+For more information about all of this, see these excellent articles that explain how this works in more detail:
 - [Full Guide to developing REST API’s with AWS API Gateway and AWS Lambda](https://blog.sourcerer.io/full-guide-to-developing-rest-apis-with-aws-api-gateway-and-aws-lambda-d254729d6992)
 - [Managing In-Production AWS Lambda Functions with API Gateway](https://medium.com/@zeebaig/managing-in-production-aws-lambda-functions-with-api-gateway-3921266ed7c6)
 

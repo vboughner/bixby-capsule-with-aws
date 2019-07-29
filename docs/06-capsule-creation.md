@@ -2,9 +2,9 @@
 
 - request a free Samsung account (if you don't already have one)
 - log into the Bixby Developer Center
-- click on the `Teams & Capsule` link in the navigation sidebar
+- click the `Teams & Capsules` link in the navigation sidebar
 - create a new organization (if you don't already have one)
-- register the memory capsule within this organization (see image below)
+- register the "memory" sample capsule within this organization (see image below)
 
 ![Register Capsule 1](register-capsule-1.png)
 
@@ -17,7 +17,7 @@
 - enter a `secretClientApiKey` key for `dev`, and press the `Add` button
 - press the `Apply` button at the top to apply all new config and secret additions (you may need to click elsewhere in the window first, to get the top apply bar to show)
 - select the `Prod` toggel for configuration mode
-- repeat this process for `prod`, use `prod` instead `dev` in the `restApiUrl`
+- **repeat this process** fpor `prod`, use `prod` instead `dev` in the `restApiUrl`
 
 ![Capsule Config 1](capsule-config-1.png)
 
@@ -35,18 +35,19 @@
 
 ## Create the Capsule
 
-- download and install Bixby Studio
-- open the capsule folder that is included in this tutorial repository
-- update the `capsule.bxb` file with your organization and capsule name (see image below)
+- download and install [Bixby Studio](https://bixbydevelopers.com/)
+- run Bixby Studio and open a capsule using the `capsule` folder that is included in this tutorial repository
+- update the `capsule.bxb` file there with your organization and capsule name (see image below)
 
 ![Capsule BXB](capsule-bxb.png)
 
 ## Test the Capsule
 
-- open the Simulator in Bixby Studio
-- press the `Compile` button if this capsule does not already have a compiled NL Model
+- open the Simulator window in Bixby Studio, using the phone icon on the left edge (near the bottom)
+- press the `Compile` button if it is shown there (if this capsule does not already have a compiled Natural Language Model)
 
-Now you may enter some NL into the Simulator window, try these statements:
+Now you may enter some NL into the Simulator window, try entering each of these statements
+and press the `Run NL` button after each one:
 - remember that I parked on the third level in section B7
 - tell me about where I parked
 - list all memories
@@ -55,9 +56,9 @@ Now you may enter some NL into the Simulator window, try these statements:
 
 ## Iterate on Capsule Development
 
-The tasks in this section continue your capsule development, by updating the provided boilerplate code with
+The tasks in this section continue your capsule development, by updating the sample code with
 your own ideas. Some of the tasks you would do at this stage with your own capsule are:
-- work out the rest api code that differs from the sample capsule
+- work out the REST api code that differs from the sample capsule
 - create concepts and actions for your capsule's unique features
 - update the training, to look for the correct responses to particular phrases
 - complete the JavaScript code for new actions
@@ -66,8 +67,7 @@ your own ideas. Some of the tasks you would do at this stage with your own capsu
 
 ## Submit a Release to Marketplace
 
-When you capsule is ready to be submitted to the marketplace, come back here for ideas about what
-steps to take:
+When you capsule is ready to be submitted to the marketplace, here are some of the steps to take:
 - create a private submission of the capsule
 - test it on a device
 - choose a marketplace category
@@ -75,6 +75,6 @@ steps to take:
 - make a public submission when you are ready to release
 
 Check the excellent documentation about
-[How to prepare your capsule for submission](https://bixbydevelopers.com/dev/docs/dev-guide/developers/deploying.prep-marketplace)
+[how to prepare your capsule for submission](https://bixbydevelopers.com/dev/docs/dev-guide/developers/deploying.prep-marketplace).
 
 Next: [Maintain and Iterate](07-maintenance-and-iteration.md)
