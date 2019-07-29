@@ -5,7 +5,12 @@
 - click on the `Teams & Capsule` link in the navigation sidebar
 - create a new organization (if you don't already have one)
 - register the memory capsule within this organization (see image below)
-- click on the `Config & Secrets` tab for this capsule (configuration mode will be `dev`)
+
+![Register Capsule 1](register-capsule-1.png)
+
+![Register Capsule 2](register-capsule-2.png)
+
+- click on the `Config & Secrets` tab for this capsule (configuration mode will be `dev`) (see image below)
 - press the `+ Add` button under Configuration
 - enter a `restApiUrl` key for `dev` (use the same URL as you tested with Postman) and press the `Add` button 
 - press the `+ Add` button under Secrets
@@ -32,7 +37,9 @@
 
 - download and install Bixby Studio
 - open the capsule folder that is included in this tutorial repository
-- update the `capsule.bxb` file with your organization and capsule name
+- update the `capsule.bxb` file with your organization and capsule name (see image below)
+
+![Capsule BXB](capsule-bxb.png)
 
 ## Test the Capsule
 
@@ -43,6 +50,8 @@ Now you may enter some NL into the Simulator window, try these statements:
 - remember that I parked on the third level in section B7
 - where did I park
 - list all memories
+
+![Simulator Natural Language](simulator-nl.png)
 
 ## Iterate on Capsule Development
 

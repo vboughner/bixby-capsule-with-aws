@@ -1,5 +1,5 @@
 capsule {
-  id (playground.memory)
+  id (tutorial.memory)
   version (0.1.0)
   format (3)
   targets {
