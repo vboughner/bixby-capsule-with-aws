@@ -2,9 +2,9 @@
 
 You'll be using the following Amazon Web Services: DynamoDB, Lambda, API Gateway, and CloudWatch (for logs).
 
-If you don't already have an AWS account, you'll need to request one 24 hours before you need it, to allow
-time for it to finish setting up. You'll also need your own AWS credentials, and the AWS command line tools.
-That's something you can set up immediately, without waiting.
+If you don't already have an AWS account, you'll need to request one, up to 3 days before you need it, to allow
+time for it to finish setting itself up. You'll also need your own AWS credentials, and the AWS command line tools
+(which is something you can work on without waiting).
 
 Here's how to request an account:
 - go to [Amazon Web Services (AWS)](https://aws.amazon.com/) and click on `Create an AWS Account`
@@ -18,11 +18,11 @@ Here's how to request an account:
 - in a few minutes, you'll receive an email acknowledging your activation
 
 If you try to access DynamoDB or Lambda immediately, you may see a web page that says
-"Your service sign-up is almost complete". That's normal during the first 24 hours when you are likely still in the
-waiting period. No action is required, when the waiting period is over, you'll receive another email that has the
+"Your service sign-up is almost complete". That's normal during the first 24 hours, when you are likely still in the
+waiting period. No action is required. When the waiting period is over, you'll receive another email that has the
 subject line "Your AWS Account is Ready - Get Started Now". I received mine after about 24 hours, the first time.
 
-Recently however, I had not received that email after 3 days. So I pressed the `Contact Support` button in the
+Recently however, I did not receive that email, and after 3 days I pressed the `Contact Support` button in the
 Lambda service page. It lead me to a page called
 [How do I create and activate a new Amazon Web Services account?](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/)
 with a number of suggestions. Surprisingly, the suggestion that worked for me was to try logging in with a different
@@ -32,12 +32,14 @@ continued to work. I received that email a few hours later.
 ## Set up Identity and Access Management
 
 There are two kinds of identity for logging into the AWS Management Console. The first is the
-root console login, which requires the email address and password that you signed up with, and you've got that kind of
-access now, if you followed the procedure above. The other is IAM access. That's a new user account that you create on
-your account, with the Identity Access Management system. You can create any number of identities like that on your
-account. When you login with IAM, you use the IAM login page, and it requires an account number, username, and password. 
+root console login, which requires the email address and password that you signed up with. You've got that kind of
+access now, if you followed the procedure above.
 
-It is recommended that use IAM accounts for regular use. So use your root console access to
+The other way to log in is to use IAM access. That's a new user account that you create on
+your account, with the Identity Access Management system. You may create any number of identities like that.
+When you login with IAM, you use the IAM login page, and it requires an account number, username, and password. 
+
+It is recommended that you use IAM accounts for regular use. So use your root console access to
 [create an IAM identity](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html#id_users_create_console)
 for yourself, and log in with the IAM identity to do your work, instead instead of using the root console. It provides
 better security management, allows you to add people to your team, and give them tailored access.

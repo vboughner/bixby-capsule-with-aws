@@ -1,7 +1,5 @@
-If you just want to get the sample capsule working and are not ready to design your own capsule yet,
-you may skip this page, and move on to [setting up the Database](03-database-setup.md).
-
-Here are more steps to consider below, about how to design and plan your capsule.
+Note: this page is about Designing your capsule.  If you just want to get the sample capsule working now,
+skip this page and move on to [setting up the Database](03-database-setup.md).
 
 ## Design the Conversation
 
@@ -10,7 +8,7 @@ Take some time to design the conversational user interface:
 - design the conversation your capsule will engage in
 - decide how you can use named-dispatch to your advantage
 
-This small effort up-front will be a big help in making many of the decisions that are coming.
+This effort up-front will be helpful making many of the decisions that are coming later.
 See the [Bixby Developer Center - Design Guides](https://bixbydevelopers.com/dev/docs/dev-guide/design-guides)
 for more help with capsule design.
 
@@ -41,13 +39,12 @@ uniquely identify the row. When you retrieve that row, it comes to you as a Java
 in the row.
 
 My Brain capsule uses a single table to store all of the memories. The primary key
-is the unique user id that comes from the
-[capsule's $vivContext](https://bixbydevelopers.com/dev/docs/dev-guide/developers/actions.js-actions#passing-user-context-information).
-The secondary sort key is the timestamp when
-a memory was created. Together those keys uniquely define each row in the table, and there is one memory stored in
-each row.
+is the unique user id that comes from the capsule's
+[$vivContext](https://bixbydevelopers.com/dev/docs/dev-guide/developers/actions.js-actions#passing-user-context-information).
+The secondary sort key is the timestamp when a memory was created. Together those keys uniquely define each
+row in the table, and there is one memory stored in each row.
 
-So, I suggest you plan ahead for your data storage needs:
+So, I suggest you plan for your data storage needs:
 - decide what will need to be stored
 - figure out how it will need to be accessed
 - design the tables and keys for efficiency of throughput
@@ -70,33 +67,36 @@ The sample memory capsule in this tutorial stores the following object, on each 
 The API for communicating between the capsule and the cloud suggested here uses HTTPS and REST.
 It’s not really a complete REST api in the traditional sense. It's used here as a convenient and secure
 way to direct remote invocation. The use of a single POST endpoint allows us to have a secret client api key
-that is encrypted while in transit, and that won't be stored in plain text in the server logs, like the parameters of
-a GET request commonly are. 
+that is encrypted while in transit, and that won't be stored in plain text in server logs, like the parameters of
+GET requests commonly are. 
 
 Take a moment to write some JSON that describes:
 - what must be in every request (action type and arguments, secretClientApiKey, clientVersion, etc.)
 - what will be in every response (success flag / error messages, serverVersion, query results, etc.)
 
 In this sample capsule, every request from the capsule to the lambda must contain these properties:
-```$js
+```$javascript
 {
   clientVersion: '1.0.0',
   secretClientApiKey: 'secret-key-stored-in-dev-center',
-  actionType: 'which-action-to-take',
+  actionType: 'which-action-to-take'
+}
 ```
 
 Using an `actionType` to specify what action is desired means that we only have to provide a single POST endpoint,
 which simplifies API Gateway maintenance. Other parameters required by the action can be added to this object.
 
 And every response from the server contains at least the following:
-```$js
+```$javascript
 {
   serverVersion: '1.0.0',
   success: true/false,
   speech: 'suggested speech for this operation'
+}
 ```
 
 Other fields will be added to the response depending on the results being returned.
-The client and server version number passing helps with maintenance of a capsule that is in production.
+Passing the client and server version numbers helps later with maintenance and enhancement of the capsule
+while in production.
 
 Next: [Set up the Database](03-database-setup.md)
