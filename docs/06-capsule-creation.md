@@ -52,7 +52,9 @@ and press the `Run NL` button after each one:
 - tell me about where I parked
 - list all memories
 
-![Simulator Natural Language](simulator-nl.png)
+![Simulator Natural Language 1](simulator-nl-1.png)
+
+![Simulator Natural Language 2](simulator-nl-2.png)
 
 ## Iterate on Capsule Development
 
