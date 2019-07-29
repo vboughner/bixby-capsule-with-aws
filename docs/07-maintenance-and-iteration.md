@@ -1,3 +1,5 @@
+TODO: fill out more of these instructions with screenshots
+
 ## Maintain Your Capsule Memory and Throughput
 
 - how to look at the CloudWatch logs
@@ -7,16 +9,11 @@
 
 ## Iterating while your Capsule is in Production
 
-- cut a release of the lambda to a version
-- set up dev and prod aliases in lambda
-- make sure your prod is set to the stable version of the lambda
+- cut a release of the lambda to a stable version
+- set the `prod` alias on your lambda to point this stable version
 - place a new server version in the lambda code
-- deploy a new version of the lambda 
-- set up stage environment variables for dev and prod in API Gateway
-- deploy dev and prod stages in the API Gateway
-- update the dev and prod urls in the Bixby Developer Center
+- deploy a new version of the lambda (this will be `LATEST` and your `dev` environment) 
 - test with the Simulator and debugger to make sure you are using dev 
-- how to use dev and prod to iterate while in production
 
 ## How to Test Lambda Code Locally
 
