@@ -6,17 +6,15 @@ This is a tutorial repository, which you may freely clone or fork to create a ne
 boilerplate code, and will show you how to create a Bixby capsule that uses Amazon Web Services for its cloud storage.
 
 If you don't already have an AWS account, skip ahead to that step and [request one now](docs/01-request-aws-account.md).
-It takes 24 hours to be completely ready, and trying to use DynamoDB before then can lead to unexpected errors.
+It can take up to 3 days to be completely ready to use, and trying to use DynamoDB before then can lead to unexpected
+errors.
 
 When you are finished with tutorial, you'll have:
 - an Amazon Web Services account of your own (Free Tier)
 - an AWS DynamoDB that stores information for your Bixby capsule users
 - an AWS Lambda function that handles database access and whatever back-end computation you need
 - a secure REST api for accessing the above
-- a working Bixby capsule that can demonstrates how to store, recall, list and delete using the mechanisms above 
-
-AWS provides a certain amount of computing resources and storage for free, and is quickly scalable. Should you
-decide to publish your capsule, it will support many users before it costs you anything at all.
+- a working Bixby capsule that demonstrates how to store, recall, list and delete using the mechanisms above 
 
 ## Capsule Architecture
 
