@@ -2,7 +2,7 @@
 
 ## Overview
 
-      This is a tutorial repository, which you may freely clone or fork to create a new Bixby Capsule. It provides some
+This is a tutorial repository, which you may freely clone or fork to create a new Bixby Capsule. It provides some
 boilerplate code, and will show you how to create a Bixby capsule that uses Amazon Web Services for its cloud storage.
 
 If you don't already have an AWS account, skip ahead to that step and [request one now](docs/01-request-aws-account.md).
