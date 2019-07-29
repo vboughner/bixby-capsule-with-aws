@@ -83,12 +83,75 @@ You'll need the API to accept JSON data, follow these steps to create a mapping:
 
 ![Map the API 7](mapping-api-7.png)
 
-## Setting up the Dev and Prod Stages
+## Creating Dev and Prod Deployment Stages
 
-TODO: try out this section and make sure how it works
+Once your capsule is released, you are going to need separate development and production environments. That
+allows you to work on new features without affecting current users. When you set up `memory-lambda`, you created
+aliases for `dev` and `prod`. Now let's create two deployment stages in your AWS API Gateway, one for each.
 
-- add the environment variable for stage
-- deploy the 2 different stages
+Here's how:
+- select the root level in your api navigation sidebar (if it's not already selected)
+- pull down the `Actions` menu
+- choose `Deploy API` (see image below)
+
+![Deploy 1](deploy-1.png)
+
+- select `[New Stage]` for the Deployment stage (see image below) 
+- enter `dev` for the State name
+- press the `Deploy` button
+
+![Deploy 2](deploy-2.png)
+
+- select the `Stage Variables` tab (see image below)
+- press the `+` button next to Add Stage Variable 
+
+![Deploy 3](deploy-3.png)
+
+- enter the variable name `env` (see image below)
+- enter the value `dev`
+- press the checkbox
+
+![Deploy 4](deploy-4.png)
+
+- click on the `memory-api` -> `Resources` link in the sidebar
+- repeat the process above, but use `prod` everywhere instead of `dev`
+
+When you are done, you will have two deployment stages, `dev` and `prod`, and each wil have a stage environment
+variable called `env` that has a value equal gto the stage name.
+
+## Make the Gateway API Dynamic
+
+Now you make the API Gateway call a different lambda alias, depending on which deployment stage is used.
+Try this:
+- click on the `memory-api` -> `Resources` link in the sidebar (see image below)
+- expand the api service and click on the `POST` operation
+- click on the `Integration Request` link 
+
+![Dynamic Lambda Call 1](dynamic-lambda-call-1.png)
+
+- click on the pencil icon to edit the name of the lambda function that you entered earlier (see image below)
+
+![Dynamic Lambda Call 2](dynamic-lambda-call-2.png)
+
+- modify the name of the lambda function from `memory-lambda` to `memory-lambda:${stageVariables.env}` (see image below)
+- click on the checkbox
+
+![Dynamic Lambda Call 3](dynamic-lambda-call-3.png)
+
+A popup window will appear, warning you that you need to give the API Gateway permission to call the lambda using both
+of the new aliases. Do the following:
+- copy the text from the red section into the clipboard (see image below)
+- note the new lambda function call (in the red rectangle in the image below)
+
+![Dynamic Lambda Call 4](dynamic-lambda-call-4.png)
+
+- open a terminal window where you have cmdline AWS access configured for this account (from the AWS setup earlier)
+- paste the clipboard text onto the command line
+- edit the command line, replacing `${stageVariables.env` with `dev` and press return (see image below)
+- paste the clipboard text onto the command line again
+- edit the command line, replacing `${stageVariables.env` with `prod` and press return
+
+![Dynamic Lambda Call 5](dynamic-lambda-call-5.png)
 
 ## Test your API with Postman
 
