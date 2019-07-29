@@ -34,7 +34,7 @@ You need to create the top-level resource for your api:
 
 ![Create Api 3](create-api-3.png)
 
-Now create a POST method on this resources:
+Now create a POST method on this resource:
 - pull down the `Actions` menu and choose `Create method`
 - choose POST from the menu that appears
 - enter the name of the lambda function, as `memory-lambda`
@@ -117,7 +117,7 @@ Here's how:
 - repeat the process above, but use `prod` everywhere instead of `dev`
 
 When you are done, you will have two deployment stages, `dev` and `prod`, and each wil have a stage environment
-variable called `env` that has a value equal gto the stage name.
+variable called `env` that has a value equal to the stage name.
 
 ## Make the Gateway API Dynamic
 
@@ -147,20 +147,93 @@ of the new aliases. Do the following:
 
 - open a terminal window where you have cmdline AWS access configured for this account (from the AWS setup earlier)
 - paste the clipboard text onto the command line
-- edit the command line, replacing `${stageVariables.env` with `dev` and press return (see image below)
+- edit the command line, replacing `${stageVariables.env}` with `dev` and press return (see image below)
 - paste the clipboard text onto the command line again
-- edit the command line, replacing `${stageVariables.env` with `prod` and press return
+- edit the command line, replacing `${stageVariables.env}` with `prod` and press return
 
 ![Dynamic Lambda Call 5](dynamic-lambda-call-5.png)
 
+## Test tha API calls the Lambda  
+
+You may test that the api calls the lambda properly for each stage by taking the following steps:
+- click on the `memory-api` -> `Resources` link in the sidebar (see image below)
+- click in the `POST` method in the navigation sidebar
+- press the `Test` link
+
+![Test with API 1](test-with-api-1.png)
+
+- enter `dev` for the value of the env state variable (see image below), or use `prod` if you like
+- enter the following JSON into the request body:
+```js
+{
+  "secretClientApiKey": "my-client-key-0425-afgnrq-4fe6h1",
+  "clientVersion": "1.0.0",
+  "userId": "my-unique-user-001",
+  "actionType": "list"
+}
+```
+- press the `Test` button
+- after the test runs, you'll be able to to see the output on the right of the image below, the response body should look similar to what you saw when you tested the lambda earlier
+
+![Test with API 2](test-with-api-2.png)
+
+Note: the request body gets wrapped in a `body-json` object by the Gateway API mapping function. That's why the code
+in `index.js` looks for the request body within a `body-json` property. You may remember that When you tested from the
+lambda earlier, you needed to wrap the request with a `body-json` object. You don't need to do that when testing
+from the Gateway API, or when using the new REST api from the outside.
+
+## Find for your REST API URL
+
+To figure out what the Urls are for accessing your api from outside AWS, look at the stage information:
+- click on the link in the left-most navigation bar that says `Stages`
+- click on `dev` or `prod`
+- note that the URL is displayed at the top, your's will have a different section at the front (that I blocked out in the image below)
+
+![Find API Url](find-api-url.png)
+
+To use the URL, you'll need to add a forward-slash and the name of the resource we added, which was `service`.
+And it can only be called with POST. Let's test it from outside AWS, in the next section.
+
 ## Test your API with Postman
 
-- download and install Postman
-- create a basic REST POST query that will work
-- save it and test with it
+It's best to test your REST api now, to any bugs worked out, before you try using it from a capsule. Try this:
+- download and install [Postman](https://www.getpostman.com/downloads/)
+- run Postman and click on the `Request` link in the welcome window to create a new request (see image below)
 
+![Postman Test 1](postman-test-1.png)
 
-For more information about all of this, see these excellent articles:
+- give the request a name, like `AWS Tutorial Request` (see image below)
+- click on `Create Collection` and enter a collection name, like `AWS Tutorial`, and click on the checkbox
+- press the `Save to AWS Tutorial` button
+
+![Postman Test 2](postman-test-2.png)
+
+- on the new request page, where it says `GET`, choose `POST` instead for the operation type (see image below)
+- enter the URL for the Gateway API, remember to add `/service` to the URL you copy from the Gateway API page above
+- click on the `Body` tab
+- under the body tab, click on `raw`
+- to tright of `raw`, where it says `Text`, choose `JSON (application/json)` from the dropdown menu instead
+- paste the same JSON data into this request that you used to test the Gateway API earlier:
+```js
+{
+  "secretClientApiKey": "my-client-key-0425-afgnrq-4fe6h1",
+  "clientVersion": "1.0.0",
+  "userId": "my-unique-user-001",
+  "actionType": "list"
+}
+```
+- click on the `Save` button
+- click on the `Send` button
+
+![Postman Test 3](postman-test-3.png)
+
+You should see results like those below:
+
+![Postman Test 4](postman-test-4.png)
+
+## References
+
+For more information about all of this, see these excellent articles that explain how all of this works in more detail:
 - [Full Guide to developing REST API’s with AWS API Gateway and AWS Lambda](https://blog.sourcerer.io/full-guide-to-developing-rest-apis-with-aws-api-gateway-and-aws-lambda-d254729d6992)
 - [Managing In-Production AWS Lambda Functions with API Gateway](https://medium.com/@zeebaig/managing-in-production-aws-lambda-functions-with-api-gateway-3921266ed7c6)
 
