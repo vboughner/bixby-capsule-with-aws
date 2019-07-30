@@ -29,7 +29,9 @@ power and storage that the capsule needs for remembering things and searching fo
 contains a Lambda that provides computing resources in the form of a JavaScript program, and storage in the form of
 a DynamoDB NoSQL database.
 
-![Storage Architecture](docs/storage-architecture.png)
+<p align="center">
+  <img src="cocs/storage-architecture.png" width="700" title="Storage Architecture" border="1" />
+</p>
 
 ## Setting up Your Own Capsule
 
