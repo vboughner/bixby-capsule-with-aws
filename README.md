@@ -30,7 +30,7 @@ contains a Lambda that provides computing resources in the form of a JavaScript 
 a DynamoDB NoSQL database.
 
 <p align="center">
-  <img src="cocs/storage-architecture.png" width="700" title="Storage Architecture" border="1" />
+  <img src="docs/storage-architecture.png" width="700" title="Storage Architecture" border="1" />
 </p>
 
 ## Setting up Your Own Capsule
