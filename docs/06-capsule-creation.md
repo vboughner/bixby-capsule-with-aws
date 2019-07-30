@@ -4,7 +4,7 @@
 - log into the Bixby Developer Center
 - click the `Teams & Capsules` link in the navigation sidebar
 - create a new organization (if you don't already have one)
-- register the "memory" sample capsule within this organization (see image below)
+- register the "memory" sample capsule within this organization (see images below)
 
 <p align="center">
   <img src="register-capsule-1.png" width="600" title="Register Capsule 1" />
@@ -34,7 +34,7 @@
   <img src="capsule-config-3.png" width="600" title="Capsule Config 3" />
 </p>
 
-- press the `Apply` button at the top to apply all new config and secret additions (you may need to click elsewhere in the window first, to get the top apply bar to show)
+- press the `Save & Apply` button at the top to apply all new config and secret additions (you may need to click elsewhere in the window first, to get the top apply bar to show)
 
 <p align="center">
   <img src="capsule-config-4.png" width="600" title="Capsule Config 4" />
@@ -55,7 +55,7 @@
   <img src="capsule-config-6.png" width="600" title="Capsule Config 6" />
 </p>
 
-- remember to `Apply` the changes, when you are finished it should look like this:
+- remember to `Save & Apply` the changes, when you are finished it should look like this:
  
 <p align="center">
   <img src="capsule-config-7.png" width="600" title="Capsule Config 7" />
