@@ -15,7 +15,7 @@ You'll start by creating a table for storing "memories" for the example capsule.
 - press the `Create` button, and you'll see a page that shows your table has been created
 
 <p align="center">
-  <img src="dynamodb-create-table.png" width="800" title="DynamoDB Create Table Settings" style="border: 1px solid black" />
+  <img src="dynamodb-create-table.png" width="800" title="DynamoDB Create Table Settings" />
 </p>
 
 If you see an error at the last step, one that looks like "The AWS Access Key Id needs a subscription

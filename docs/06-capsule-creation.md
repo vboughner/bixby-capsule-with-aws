@@ -6,9 +6,13 @@
 - create a new organization (if you don't already have one)
 - register the "memory" sample capsule within this organization (see image below)
 
-![Register Capsule 1](register-capsule-1.png)
+<p align="center">
+  <img src="register-capsule-1.png" width="800" title="Register Capsule 1" />
+</p>
 
-![Register Capsule 2](register-capsule-2.png)
+<p align="center">
+  <img src="register-capsule-2.png" width="800" title="Register Capsule 2" />
+</p>
 
 - click on the `Config & Secrets` tab for this capsule (configuration mode will be `dev`) (see image below)
 - press the `+ Add` button under Configuration
@@ -19,19 +23,33 @@
 - select the `Prod` toggel for configuration mode
 - **repeat this process** fpor `prod`, use `prod` instead `dev` in the `restApiUrl`
 
-![Capsule Config 1](capsule-config-1.png)
+<p align="center">
+  <img src="capsule-config-1.png" width="800" title="Capsule Config 1" />
+</p>
 
-![Capsule Config 2](capsule-config-2.png)
+<p align="center">
+  <img src="capsule-config-2.png" width="800" title="Capsule Config 2" />
+</p>
 
-![Capsule Config 3](capsule-config-3.png)
+<p align="center">
+  <img src="capsule-config-3.png" width="800" title="Capsule Config 3" />
+</p>
 
-![Capsule Config 4](capsule-config-4.png)
+<p align="center">
+  <img src="capsule-config-4.png" width="800" title="Capsule Config 4" />
+</p>
 
-![Capsule Config 5](capsule-config-5.png)
+<p align="center">
+  <img src="capsule-config-5.png" width="800" title="Capsule Config 5" />
+</p>
 
-![Capsule Config 6](capsule-config-6.png)
+<p align="center">
+  <img src="capsule-config-6.png" width="800" title="Capsule Config 6" />
+</p>
 
-![Capsule Config 7](capsule-config-7.png)
+<p align="center">
+  <img src="capsule-config-7.png" width="800" title="Capsule Config 7" />
+</p>
 
 ## Create the Capsule
 
@@ -39,7 +57,9 @@
 - run Bixby Studio and open a capsule using the `capsule` folder that is included in this tutorial repository
 - update the `capsule.bxb` file there with your organization and capsule name (see image below)
 
-![Capsule BXB](capsule-bxb.png)
+<p align="center">
+  <img src="capsule-bxb.png" width="800" title="Capsule BXB" />
+</p>
 
 ## Test the Capsule
 
@@ -52,9 +72,13 @@ and press the `Run NL` button after each one:
 - tell me about where I parked
 - list all memories
 
-![Simulator Natural Language 1](simulator-nl-1.png)
+<p align="center">
+  <img src="simulator-nl-1.png" width="800" title="Simulator Natural Language 1" />
+</p>
 
-![Simulator Natural Language 2](simulator-nl-2.png)
+<p align="center">
+  <img src="simulator-nl-2.png" width="800" title="Simulator Natural Language 2" />
+</p>
 
 ## Iterate on Capsule Development
 
