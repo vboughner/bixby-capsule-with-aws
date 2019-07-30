@@ -30,7 +30,7 @@ to enable it to access every database table that you create:
 - click on the link called `View the memory-lambda role` (see image below) 
 
 <p align="center">
-  <img src="execution-role.png" width="800" title="Execution Role" />
+  <img src="execution-role.png" width="600" title="Execution Role" />
 </p>
 
 - when the role is displayed, look for the blue `Attach policies` button and click on it
@@ -148,7 +148,7 @@ Here's how to set up the 2 aliases:
 </p>
 
 <p align="center">
-  <img src="create-aliases-2.png" width="800" title="Create Dev Alias" />
+  <img src="create-aliases-2.png" width="600" title="Create Dev Alias" />
 </p>
 
 <p align="center">

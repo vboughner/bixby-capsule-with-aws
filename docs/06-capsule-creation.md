@@ -7,11 +7,11 @@
 - register the "memory" sample capsule within this organization (see image below)
 
 <p align="center">
-  <img src="register-capsule-1.png" width="800" title="Register Capsule 1" />
+  <img src="register-capsule-1.png" width="600" title="Register Capsule 1" />
 </p>
 
 <p align="center">
-  <img src="register-capsule-2.png" width="800" title="Register Capsule 2" />
+  <img src="register-capsule-2.png" width="600" title="Register Capsule 2" />
 </p>
 
 - click on the `Config & Secrets` tab for this capsule (configuration mode will be `dev`) (see image below)
@@ -24,31 +24,31 @@
 - **repeat this process** fpor `prod`, use `prod` instead `dev` in the `restApiUrl`
 
 <p align="center">
-  <img src="capsule-config-1.png" width="800" title="Capsule Config 1" />
+  <img src="capsule-config-1.png" width="600" title="Capsule Config 1" />
 </p>
 
 <p align="center">
-  <img src="capsule-config-2.png" width="800" title="Capsule Config 2" />
+  <img src="capsule-config-2.png" width="600" title="Capsule Config 2" />
 </p>
 
 <p align="center">
-  <img src="capsule-config-3.png" width="800" title="Capsule Config 3" />
+  <img src="capsule-config-3.png" width="600" title="Capsule Config 3" />
 </p>
 
 <p align="center">
-  <img src="capsule-config-4.png" width="800" title="Capsule Config 4" />
+  <img src="capsule-config-4.png" width="600" title="Capsule Config 4" />
 </p>
 
 <p align="center">
-  <img src="capsule-config-5.png" width="800" title="Capsule Config 5" />
+  <img src="capsule-config-5.png" width="600" title="Capsule Config 5" />
 </p>
 
 <p align="center">
-  <img src="capsule-config-6.png" width="800" title="Capsule Config 6" />
+  <img src="capsule-config-6.png" width="600" title="Capsule Config 6" />
 </p>
 
 <p align="center">
-  <img src="capsule-config-7.png" width="800" title="Capsule Config 7" />
+  <img src="capsule-config-7.png" width="600" title="Capsule Config 7" />
 </p>
 
 ## Create the Capsule
@@ -58,7 +58,7 @@
 - update the `capsule.bxb` file there with your organization and capsule name (see image below)
 
 <p align="center">
-  <img src="capsule-bxb.png" width="800" title="Capsule BXB" />
+  <img src="capsule-bxb.png" width="600" title="Capsule BXB" />
 </p>
 
 ## Test the Capsule
