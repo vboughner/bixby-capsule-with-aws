@@ -6,7 +6,9 @@ The AWS Lambda is where your back-end code runs, follow these steps to set it up
 - enter the name of the function: `memory-lambda` (see image below, this name must match the lambda name in the `deploy.sh` script you use later)
 - press the orange `Create` button
 
-![Create Lambda Function](create-function.png)
+<p align="center">
+  <img src="create-function.png" width="800" title="Create Lambda Function" />
+</p>
 
 Once the lambda is created, it has some Hello World code in it (and we'll replace this code in a later step).
 Try out a test of the lambda by executing it:
@@ -16,7 +18,9 @@ Try out a test of the lambda by executing it:
 - press the `Test` button near the top again, and this time it will run the lambda test
 - click on the triangle next to `Details` to see the results (see image below)
 
-![Successful Lambda Test](successful-lambda-test.png)
+<p align="center">
+  <img src="successful-lambda-test.png" width="800" title="Successful Lambda Test" />
+</p>
 
 ## Add Permission to access DynamoDB
 
@@ -25,14 +29,18 @@ to enable it to access every database table that you create:
 - on the Lambda function page you've been using, scroll down to the `Execution Role` section
 - click on the link called `View the memory-lambda role` (see image below) 
 
-![Execution Role](execution-role.png)
+<p align="center">
+  <img src="execution-role.png" width="600" title="Execution Role" />
+</p>
 
 - when the role is displayed, look for the blue `Attach policies` button and click on it
 - when the policy list comes up, enter `dynamodb` into the search bar (see image below)
 - check the box for `AmazonDynamoDBFullAccess` (you can see the different policy names by hovering over them) 
 - press the `Attach policy` button
 
-![Add Policy for DynamoDB](add-policy-for-dynamodb.png)
+<p align="center">
+  <img src="add-policy-for-dynamodb.png" width="800" title="Add Policy for DynamoDB" />
+</p>
 
 ## Set up Environment Variable
 
@@ -44,7 +52,9 @@ your lambda and database. Follow these steps to set this key into an environment
 - enter a unique key that is long enough to be difficult to guess, note it, because you'll need it again later when setting up the capsule (in this example I used `my-client-key-0425-afgnrq-4fe6h1`)
 - press the orange `Save` button at the top of the lambda
 
-![Lambda Environment Variable](lambda-env-variable.png)
+<p align="center">
+  <img src="lambda-env-variable.png" width="800" title="Lambda Environment Variable" />
+</p>
 
 ## Deploy New Lambda Code
 
@@ -78,7 +88,7 @@ If you see a timeout error when your lambda runs, instead of a more informative 
 You can test the newly deployed code on the lambda function web page, like this:
 - press the `Test` button at the top of your lambda function page to run your Hello World test again (from earlier)
 - it should run successfully, and the details will include a response that looks like this:
-```js
+```javascript
 {
   "success": false,
   "errorCode": 1001,
@@ -91,7 +101,7 @@ Let's make that test work better:
 - look for a dropdown menu next to the `Test` button 
 - pull down the menu and select `Configure test events`
 - in the window that appears, change the JSON for the hello world test to the following (replacing what comes after `secretClientApiKey` with your own secret key if you made it different):
-```js
+```javascript
 {
   "body-json": {
     "secretClientApiKey": "my-client-key-0425-afgnrq-4fe6h1",
@@ -102,10 +112,12 @@ Let's make that test work better:
 }
 ```
 
-![Test Event Input](test-event-input.png)
+<p align="center">
+  <img src="test-event-input.png" width="800" title="Test Event Input" />
+</p>
 
 This time when you press `Test` again, you should see output like this:
-```js
+```javascript
 {
   "answers": [],
   "success": true,
@@ -126,16 +138,24 @@ which version of your lambda is used in production (to keep things stable).
 
 Here's how to set up the 2 aliases:
 - choose the `Create alias` item from the `Actions` menu (see image below)
+
+<p align="center">
+  <img src="create-aliases-1.png" width="800" title="Choose Actions Menu" />
+</p>
+
 - in the window for creating an alias, enter `dev`, and `dev`, and choose the `LATEST` version
 - create the `Create` button
+
+<p align="center">
+  <img src="create-aliases-2.png" width="600" title="Create Dev Alias" />
+</p>
+
 - repeat the process again for, using `prod`, and `prod`, and `LATEST`
 - when you are finished, you can view and choose which lambda version you are testing using the `Alias` dropdown
 
-![Choose Actions Menu](create-aliases-1.png)
-
-![Create Dev Alias](create-aliases-2.png)
-
-![Alias Dropdown Menu](create-aliases-3.png)
+<p align="center">
+  <img src="create-aliases-3.png" width="800" title="Alias Dropdown Menu" />
+</p>
 
 Congratulations, your lambda is all set up!
 

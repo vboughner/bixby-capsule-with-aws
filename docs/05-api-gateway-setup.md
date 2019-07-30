@@ -23,16 +23,22 @@ Here's how to create your API Gateway service:
 - in the page that follows, enter an API name, like `memory-api` (see image below)
 - press the `Create API` button
 
-![Create Api 1](create-api-1.png)
+<p align="center">
+  <img src="create-api-1.png" width="800" title="Create Api 1" />
+</p>
 
 You need to create the top-level resource for your api:
 - pull down the `Actions` menu and choose `Create Resource`
 - enter a resource name and resource path (use `service` for both)
 - press the `Create resource` button
 
-![Create Api 2](create-api-2.png)
+<p align="center">
+  <img src="create-api-2.png" width="800" title="Create Api 2" />
+</p>
 
-![Create Api 3](create-api-3.png)
+<p align="center">
+  <img src="create-api-3.png" width="800" title="Create Api 3" />
+</p>
 
 Now create a POST method on this resource:
 - pull down the `Actions` menu and choose `Create method`
@@ -41,11 +47,17 @@ Now create a POST method on this resource:
 - press the `Save` button
 - press `Ok` when a popup window asks you about providing access to the lambda function
 
-![Create Api 4](create-api-4.png)
+<p align="center">
+  <img src="create-api-4.png" width="800" title="Create Api 4" />
+</p>
 
-![Create Api 5](create-api-5.png)
+<p align="center">
+  <img src="create-api-5.png" width="800" title="Create Api 5" />
+</p>
 
-![Create Api 6](create-api-6.png)
+<p align="center">
+  <img src="create-api-6.png" width="800" title="Create Api 6" />
+</p>
 
 ## Organizing the Incoming JSON Data
 
@@ -53,35 +65,49 @@ You'll need the API to accept JSON data, follow these steps to create a mapping:
 - after the last step, you should be at the service POST page (see image below)
 - click on the `Integration Request` link
 
-![Map the API 1](mapping-api-1.png)
+<p align="center">
+  <img src="mapping-api-1.png" width="800" title="Map the API 1" />
+</p>
 
 - scroll down until you can see `Mapping Templates` (see image below)
 - click on the triangle to expand this section
 - click on the + button to add a mapping template
 
-![Map the API 2](mapping-api-2.png)
+<p align="center">
+  <img src="mapping-api-2.png" width="800" title="Map the API 2" />
+</p>
 
 - enter `application/json` into the content-type field
 - press the checkmark button
 
-![Map the API 3](mapping-api-3.png)
+<p align="center">
+  <img src="mapping-api-3.png" width="800" title="Map the API 3" />
+</p>
 
 - when a popup comes through about changing passthrough behavior, press the `Yes, secure this integration` button
 
-![Map the API 4](mapping-api-4.png)
+<p align="center">
+  <img src="mapping-api-4.png" width="600" title="Map the API 4" />
+</p>
 
 - scroll down further so you can see the generate template dropdown menu
 - choose `Method Request passthru` from the menu
 
-![Map the API 5](mapping-api-5.png)
+<p align="center">
+  <img src="mapping-api-5.png" width="800" title="Map the API 5" />
+</p>
 
 - once the code fills into the window, press the `Save` button 
 
-![Map the API 6](mapping-api-6.png)
+<p align="center">
+  <img src="mapping-api-6.png" width="800" title="Map the API 6" />
+</p>
 
 - return to the POST method page once again by clicking on the `Method Execution` link
 
-![Map the API 7](mapping-api-7.png)
+<p align="center">
+  <img src="mapping-api-7.png" width="800" title="Map the API 7" />
+</p>
 
 ## Creating Dev and Prod Deployment Stages
 
@@ -94,24 +120,32 @@ Here's how:
 - pull down the `Actions` menu
 - choose `Deploy API` (see image below)
 
-![Deploy 1](deploy-1.png)
+<p align="center">
+  <img src="deploy-1.png" width="800" title="Deploy 1" />
+</p>
 
 - select `[New Stage]` for the Deployment stage (see image below) 
 - enter `dev` for the State name
 - press the `Deploy` button
 
-![Deploy 2](deploy-2.png)
+<p align="center">
+  <img src="deploy-2.png" width="500" title="Deploy 2" />
+</p>
 
 - select the `Stage Variables` tab (see image below)
 - press the `+` button next to Add Stage Variable 
 
-![Deploy 3](deploy-3.png)
+<p align="center">
+  <img src="deploy-3.png" width="800" title="Deploy 3" />
+</p>
 
 - enter the variable name `env` (see image below)
 - enter the value `dev`
 - press the checkbox
 
-![Deploy 4](deploy-4.png)
+<p align="center">
+  <img src="deploy-4.png" width="800" title="Deploy 4" />
+</p>
 
 - click on the `memory-api` -> `Resources` link in the sidebar
 - **repeat the process above** to deploy another stage, but this time use `prod`, instead of `dev`
@@ -128,23 +162,31 @@ depending on which deployment stage is used. Try this:
 - click on the `POST` operation
 - click on the `Integration Request` link 
 
-![Dynamic Lambda Call 1](dynamic-lambda-call-1.png)
+<p align="center">
+  <img src="dynamic-lambda-call-1.png" width="800" title="Dynamic Lambda Call 1" />
+</p>
 
 - click on the pencil icon to edit the name of the lambda function that you entered earlier (see image below)
 
-![Dynamic Lambda Call 2](dynamic-lambda-call-2.png)
+<p align="center">
+  <img src="dynamic-lambda-call-2.png" width="800" title="Dynamic Lambda Call 2" />
+</p>
 
 - modify the name of the lambda function from `memory-lambda` to `memory-lambda:${stageVariables.env}` (see image below)
 - click on the checkbox
 
-![Dynamic Lambda Call 3](dynamic-lambda-call-3.png)
+<p align="center">
+  <img src="dynamic-lambda-call-3.png" width="800" title="Dynamic Lambda Call 3" />
+</p>
 
 A popup window will appear, warning you that you need to give the API Gateway permission to call the lambda using both
 of the new aliases. Do the following:
 - copy all of the text from the pink background section into the clipboard (see image below, I've blocked out own account number)
 - note the location of the new lambda function call (the red rectangle in the image below)
 
-![Dynamic Lambda Call 4](dynamic-lambda-call-4.png)
+<p align="center">
+  <img src="dynamic-lambda-call-4.png" width="700" title="Dynamic Lambda Call 4" />
+</p>
 
 - open a terminal window where you have cmdline AWS access configured for this account (from the AWS setup earlier)
 - paste the clipboard text onto the command line
@@ -152,7 +194,9 @@ of the new aliases. Do the following:
 - paste the clipboard text onto the command line again
 - edit the command line, replacing `${stageVariables.env}` with `prod` and press return
 
-![Dynamic Lambda Call 5](dynamic-lambda-call-5.png)
+<p align="center">
+  <img src="dynamic-lambda-call-5.png" width="700" title="Dynamic Lambda Call 5" />
+</p>
 
 ## Test that the API calls the Lambda  
 
@@ -161,7 +205,9 @@ You may test that the api calls the lambda properly for each stage, by taking th
 - click in the `POST` method in the navigation sidebar
 - press the `Test` link
 
-![Test with API 1](test-with-api-1.png)
+<p align="center">
+  <img src="test-with-api-1.png" width="800" title="Test with API 1" />
+</p>
 
 - enter `dev` for the value of the env state variable (see image below, you may use `prod` instead if you like)
 - enter the following JSON into the request body:
@@ -176,7 +222,9 @@ You may test that the api calls the lambda properly for each stage, by taking th
 - press the `Test` button
 - after the test runs, you'll be able to to see the output on the right of the image below, the Response Body should look similar to what you saw when you tested the lambda earlier
 
-![Test with API 2](test-with-api-2.png)
+<p align="center">
+  <img src="test-with-api-2.png" width="800" title="Test with API 2" />
+</p>
 
 Note: the request gets wrapped in a `body-json` object by the Gateway API mapping function. That's why the code
 in `index.js` looks for the request body within a `body-json` property. You may remember that When you tested from the
@@ -190,7 +238,9 @@ To find the url for accessing your api from outside AWS, look at the stage infor
 - click on `dev` or `prod`
 - note that the URL is displayed at the top (I blocked out the account identifier in the image below)
 
-![Find API Url](find-api-url.png)
+<p align="center">
+  <img src="find-api-url.png" width="800" title="Find API Url" />
+</p>
 
 To use the URL, you'll need to add a forward-slash and the name of the resource we added, which was `service`.
 And it can only be called with POST. We'll test it from outside AWS, in the next section.
@@ -201,13 +251,17 @@ It's best to test your REST api now, to work out any bugs, before you try using 
 - download and install [Postman](https://www.getpostman.com/downloads/)
 - run Postman and click on the `Request` link in the welcome window to create a new request (see image below)
 
-![Postman Test 1](postman-test-1.png)
+<p align="center">
+  <img src="postman-test-1.png" width="700" title="Postman Test 1" />
+</p>
 
 - give the request a name, like `AWS Tutorial Request` (see image below)
 - click on `Create Collection` and enter a collection name, like `AWS Tutorial`, and click on the checkbox
 - press the `Save to AWS Tutorial` button
 
-![Postman Test 2](postman-test-2.png)
+<p align="center">
+  <img src="postman-test-2.png" width="500" title="Postman Test 2" />
+</p>
 
 - on the new request page, where it says `GET`, choose `POST` instead for the operation type (see image below)
 - enter the URL for the Gateway API, remember to add `/service` to the URL that you copied from the Gateway API page above
@@ -226,11 +280,15 @@ It's best to test your REST api now, to work out any bugs, before you try using 
 - click on the `Save` button
 - click on the `Send` button
 
-![Postman Test 3](postman-test-3.png)
+<p align="center">
+  <img src="postman-test-3.png" width="800" title="Postman Test 3" />
+</p>
 
 You should see results like those below:
 
-![Postman Test 4](postman-test-4.png)
+<p align="center">
+  <img src="postman-test-4.png" width="800" title="Postman Test 4" />
+</p>
 
 ## References
 
