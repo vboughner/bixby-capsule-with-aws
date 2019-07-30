@@ -14,7 +14,9 @@ You'll start by creating a table for storing "memories" for the example capsule.
 - leave the `Use default settings` checkbox alone (i.e. leave it checked),
 - press the `Create` button, and you'll see a page that shows your table has been created
 
-![DynamoDB Create Table Settings](dynamodb-create-table.png)
+<p align="center">
+  <img src="dynamodb-create-table.png" width="800" title="DynamoDB Create Table Settings" style="border: 1px solid black" />
+</p>
 
 If you see an error at the last step, one that looks like "The AWS Access Key Id needs a subscription
 for the service", your AWS account is probably not ready. If you haven't received that 3rd email from AWS
