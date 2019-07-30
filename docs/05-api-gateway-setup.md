@@ -129,7 +129,7 @@ Here's how:
 - press the `Deploy` button
 
 <p align="center">
-  <img src="deploy-2.png" width="600" title="Deploy 2" />
+  <img src="deploy-2.png" width="500" title="Deploy 2" />
 </p>
 
 - select the `Stage Variables` tab (see image below)
@@ -185,7 +185,7 @@ of the new aliases. Do the following:
 - note the location of the new lambda function call (the red rectangle in the image below)
 
 <p align="center">
-  <img src="dynamic-lambda-call-4.png" width="600" title="Dynamic Lambda Call 4" />
+  <img src="dynamic-lambda-call-4.png" width="700" title="Dynamic Lambda Call 4" />
 </p>
 
 - open a terminal window where you have cmdline AWS access configured for this account (from the AWS setup earlier)
@@ -195,7 +195,7 @@ of the new aliases. Do the following:
 - edit the command line, replacing `${stageVariables.env}` with `prod` and press return
 
 <p align="center">
-  <img src="dynamic-lambda-call-5.png" width="800" title="Dynamic Lambda Call 5" />
+  <img src="dynamic-lambda-call-5.png" width="700" title="Dynamic Lambda Call 5" />
 </p>
 
 ## Test that the API calls the Lambda  
@@ -252,7 +252,7 @@ It's best to test your REST api now, to work out any bugs, before you try using 
 - run Postman and click on the `Request` link in the welcome window to create a new request (see image below)
 
 <p align="center">
-  <img src="postman-test-1.png" width="600" title="Postman Test 1" />
+  <img src="postman-test-1.png" width="700" title="Postman Test 1" />
 </p>
 
 - give the request a name, like `AWS Tutorial Request` (see image below)
@@ -260,7 +260,7 @@ It's best to test your REST api now, to work out any bugs, before you try using 
 - press the `Save to AWS Tutorial` button
 
 <p align="center">
-  <img src="postman-test-2.png" width="600" title="Postman Test 2" />
+  <img src="postman-test-2.png" width="500" title="Postman Test 2" />
 </p>
 
 - on the new request page, where it says `GET`, choose `POST` instead for the operation type (see image below)

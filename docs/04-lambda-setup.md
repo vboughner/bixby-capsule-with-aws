@@ -138,18 +138,20 @@ which version of your lambda is used in production (to keep things stable).
 
 Here's how to set up the 2 aliases:
 - choose the `Create alias` item from the `Actions` menu (see image below)
-- in the window for creating an alias, enter `dev`, and `dev`, and choose the `LATEST` version
-- create the `Create` button
-- repeat the process again for, using `prod`, and `prod`, and `LATEST`
-- when you are finished, you can view and choose which lambda version you are testing using the `Alias` dropdown
 
 <p align="center">
   <img src="create-aliases-1.png" width="800" title="Choose Actions Menu" />
 </p>
 
+- in the window for creating an alias, enter `dev`, and `dev`, and choose the `LATEST` version
+- create the `Create` button
+
 <p align="center">
   <img src="create-aliases-2.png" width="600" title="Create Dev Alias" />
 </p>
+
+- repeat the process again for, using `prod`, and `prod`, and `LATEST`
+- when you are finished, you can view and choose which lambda version you are testing using the `Alias` dropdown
 
 <p align="center">
   <img src="create-aliases-3.png" width="800" title="Alias Dropdown Menu" />

@@ -16,37 +16,47 @@
 
 - click on the `Config & Secrets` tab for this capsule (configuration mode will be `dev`) (see image below)
 - press the `+ Add` button under Configuration
-- enter a `restApiUrl` key for `dev` (use the same URL as you tested with Postman) and press the `Add` button 
-- press the `+ Add` button under Secrets
-- enter a `secretClientApiKey` key for `dev`, and press the `Add` button
-- press the `Apply` button at the top to apply all new config and secret additions (you may need to click elsewhere in the window first, to get the top apply bar to show)
-- select the `Prod` toggel for configuration mode
-- **repeat this process** fpor `prod`, use `prod` instead `dev` in the `restApiUrl`
 
 <p align="center">
   <img src="capsule-config-1.png" width="600" title="Capsule Config 1" />
 </p>
 
+- enter a `restApiUrl` key for `dev` (use the same URL as you tested with Postman) and press the `Add` button 
+
 <p align="center">
   <img src="capsule-config-2.png" width="600" title="Capsule Config 2" />
 </p>
+
+- press the `+ Add` button under Secrets
+- enter a `secretClientApiKey` key for `dev`, and press the `Add` button
 
 <p align="center">
   <img src="capsule-config-3.png" width="600" title="Capsule Config 3" />
 </p>
 
+- press the `Apply` button at the top to apply all new config and secret additions (you may need to click elsewhere in the window first, to get the top apply bar to show)
+
 <p align="center">
   <img src="capsule-config-4.png" width="600" title="Capsule Config 4" />
 </p>
+
+- select the `Prod` toggle for configuration mode
+- enter a `restApiUrl` key for `prod` (remember to use `prod` instead `dev` in the url)
+- press the `Add` button
 
 <p align="center">
   <img src="capsule-config-5.png" width="600" title="Capsule Config 5" />
 </p>
 
+- enter a `secretClientApiKey` key for `prod` (the same one you used for dev)
+- press the `Add` button
+
 <p align="center">
   <img src="capsule-config-6.png" width="600" title="Capsule Config 6" />
 </p>
 
+- remember to `Apply` the changes, when you are finished it should look like this:
+ 
 <p align="center">
   <img src="capsule-config-7.png" width="600" title="Capsule Config 7" />
 </p>
@@ -58,7 +68,7 @@
 - update the `capsule.bxb` file there with your organization and capsule name (see image below)
 
 <p align="center">
-  <img src="capsule-bxb.png" width="600" title="Capsule BXB" />
+  <img src="capsule-bxb.png" width="800" title="Capsule BXB" />
 </p>
 
 ## Test the Capsule
