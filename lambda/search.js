@@ -15,9 +15,8 @@ const fuseSearchOptions = {
     minMatchCharLength: minWordLength,
 };
 
-// strip out punctuation and double-spaces (probably only important for command line testing,
-// because does the skill's literal slot really ever return any punctuation?)
-// thanks go to this stack overflow answer: https://stackoverflow.com/a/4328722/5828789
+// strip out punctuation and double-spaces, gratitude goes to this
+// stack overflow suggestion: https://stackoverflow.com/a/4328722/5828789
 function stripPunctuation(text) {
     // noinspection RegExpRedundantEscape
     let withoutPunctuation = text.replace(/[\!\?.,\/#!$%\^&\*;:{}=\-_`~()]/g, '');
