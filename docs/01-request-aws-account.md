@@ -76,8 +76,8 @@ You need AWS command-line access to deploy code to your lambda and get access th
 - note your "Access key ID" and "Secret access key" in the 3rd and 4th columns (on the second row of that `.csv` file)
 - configure your AWS identity by typing `aws configure` on the command line
 - when prompted, enter the "Access key ID" and "Secret access key" from the `.csv` file
-- for default region name, leave it set at `us-east-1` (just press return)
-- for default output format, leave is set at `json`
+- for default region name, set it to `us-east-2` (if you are using the `Ohio` region on your AWS console)
+- for default output format, leave is set at `json` (just press return)
 
 You'll notice that the `aws configure` command created new files in your `~/.aws` folder
 called `config` and `credentials`. When you have more than one AWS account, it is useful to create copies of these
@@ -92,5 +92,11 @@ user name and password for that IAM user you created.
 
 Use the Find Services search bar to look for these services: DynamoDB, Lambda, CloudWatch,
 and API Gateway. Those lead to pages where you will configure these services using the instructions that follow.
+
+New accounts are typically configured to use the Ohio (US East) region by default, and this tutorial assumes
+you will use that region. It is important that you build all the services in this tutorial
+(DynamoDB, Lambda, and API Gateway) in the same region, so they can work together. If you would like
+to use a different region, you may do so, but you should change `us-east-2` in the `lambda/db.js` file to
+match the new region you have selected.
 
 Next: [Design and Plan](02-design-and-plan.md)
