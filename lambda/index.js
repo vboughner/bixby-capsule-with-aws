@@ -103,30 +103,33 @@ function selectBestMemoriesForQuestion(memories, question) {
 async function recallForQuestion(userId, text) {
     let refinedText = wordModule.cutQuestionChatter(text);
     const recordedMemories = await dbModule.loadMemories(userId);
-    let bestMemories = selectBestMemoriesForQuestion(recordedMemories, refinedText);
-    let response = {};
-    response.answers = [];
-    if (bestMemories && bestMemories.length > 0) {
-        for (let i = 0; i < bestMemories.length; i++) {
-            const selectedMemory = bestMemories[i];
-            response.answers[i] = {
-                text: selectedMemory.text,
-                whenStored: selectedMemory.whenStored,
-                userId: selectedMemory.userId,
-                score: selectedMemory.score,
-                howLongAgo: timeModule.getHowLongAgoText(Number(selectedMemory.whenStored)),
-            };
+    if (recordedMemories) {
+        let bestMemories = selectBestMemoriesForQuestion(recordedMemories, refinedText);
+        let response = {};
+        response.answers = [];
+        if (bestMemories && bestMemories.length > 0) {
+            for (let i = 0; i < bestMemories.length; i++) {
+                const selectedMemory = bestMemories[i];
+                response.answers[i] = {
+                    text: selectedMemory.text,
+                    whenStored: selectedMemory.whenStored,
+                    userId: selectedMemory.userId,
+                    score: selectedMemory.score,
+                    howLongAgo: timeModule.getHowLongAgoText(Number(selectedMemory.whenStored)),
+                };
+            }
+            response.success = true;
+            response.speech = 'You told me ' + response.answers[0].howLongAgo + ': ' + response.answers[0].text + '.';
+        } else {
+            response.success = false;
+            response.speech = 'I don\'t have a memory that makes sense as an answer for that.';
         }
-        response.success = true;
-        response.speech = 'You told me ' + response.answers[0].howLongAgo + ': ' + response.answers[0].text + '.';
+        response.serverVersion = SERVER_VERSION;
+        console.log('question response', response);
+        return response;
+    } else {
+        return error.getResponse(error.UNSPECIFIED, 'could not find the database to search memories')
     }
-    else {
-        response.success = false;
-        response.speech = 'I don\'t have a memory that makes sense as an answer for that.';
-    }
-    response.serverVersion = SERVER_VERSION;
-    console.log('question response', response);
-    return response;
 }
 
 // return a response object that contains everything about a statement, after storing information
@@ -159,29 +162,32 @@ async function memorizeStatement(userId, text) {
 
 async function getList(userId) {
     const recordedMemories = await dbModule.loadMemories(userId);
-    let response = {};
-    response.answers = [];
-    if (recordedMemories && recordedMemories.length > 0) {
-        for (let i = recordedMemories.length - 1; i >= 0; i--) {
-            const selectedMemory = recordedMemories[i];
-            response.answers.push({
-                text: selectedMemory.text,
-                whenStored: selectedMemory.whenStored,
-                userId: selectedMemory.userId,
-                score: selectedMemory.score,
-                howLongAgo: timeModule.getHowLongAgoText(Number(selectedMemory.whenStored)),
-            });
+    if (recordedMemories) {
+        let response = {};
+        response.answers = [];
+        if (recordedMemories && recordedMemories.length > 0) {
+            for (let i = recordedMemories.length - 1; i >= 0; i--) {
+                const selectedMemory = recordedMemories[i];
+                response.answers.push({
+                    text: selectedMemory.text,
+                    whenStored: selectedMemory.whenStored,
+                    userId: selectedMemory.userId,
+                    score: selectedMemory.score,
+                    howLongAgo: timeModule.getHowLongAgoText(Number(selectedMemory.whenStored)),
+                });
+            }
+            response.success = true;
+            response.speech = 'You have ' + response.answers.length + (response.answers.length > 1 ? ' memories.' : ' memory');
+        } else {
+            response.success = true;
+            response.speech = 'There are no memories.';
         }
-        response.success = true;
-        response.speech = 'You have ' + response.answers.length + (response.answers.length > 1 ? ' memories.' : ' memory');
+        response.serverVersion = SERVER_VERSION;
+        console.log('list response', response);
+        return response;
+    } else {
+        return error.getResponse(error.UNSPECIFIED, 'could not find the database to get memories')
     }
-    else {
-        response.success = true;
-        response.speech = 'There are no memories.';
-    }
-    response.serverVersion = SERVER_VERSION;
-    console.log('list response', response);
-    return response;
 }
 
 async function deleteOne(userId, whenStored) {

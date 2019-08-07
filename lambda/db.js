@@ -5,7 +5,7 @@ const docClient = new awsSDK.DynamoDB.DocumentClient({ region: 'us-east-2' }); /
 const storeTable = 'memories'; // must match the name of the table you created in DynamoDB
 const maxBatchOperations = 25; // you get an error with too many batch write operations at once
 
-// load everything from memory in the db for this user, returns the array of data items
+// load everything from memory in the db for this user, returns the array of data items, returns null on an error
 async function loadMemories(userId) {
     return new Promise((resolve, reject) => {
         let params = {
@@ -23,7 +23,7 @@ async function loadMemories(userId) {
         docClient.query(params, function(err, data) {
             if (err) {
                 console.log('ERROR: problem in query operation = ' + JSON.stringify(err, null, 2));
-                resolve([]);
+                resolve(null);
             }
             else {
                 // console.log('DEBUG: returned from query operation = ' + JSON.stringify(data));
