@@ -20,6 +20,8 @@ without disturbing current users.
 Here's how to create your API Gateway service:
 - go the [API Gateway Service](https://console.aws.amazon.com/apigateway)
 - press the blue `Create API` button
+- if it asks you to create an example api for the pet store (because this is your first api), click `Ok`
+- select `New API` (instead of `Example API`, if necessary)
 - in the page that follows, enter an API name, like `memory-api` (see image below)
 - press the `Create API` button
 
@@ -30,6 +32,7 @@ Here's how to create your API Gateway service:
 You need to create the top-level resource for your api:
 - pull down the `Actions` menu and choose `Create Resource`
 - enter a resource name and resource path (use `service` for both)
+- leave the CORS checkbox unchecked
 - press the `Create resource` button
 
 <p align="center">

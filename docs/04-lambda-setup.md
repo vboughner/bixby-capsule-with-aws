@@ -2,8 +2,11 @@
 
 The AWS Lambda is where your back-end code runs, follow these steps to set it up for the sample capsule:
 - got to the [Lambda Dashboard](https://console.aws.amazon.com/lambda) in the AWS Management Console
+- look on the top line of the console, make sure that you have selected the `N. Virginia` region (which is `us-east-1`, and matches what is specified in `db.js`, if you choose a different region you'll need to update the lambda code)
 - look for an orange button that says `Create function` and click on it
 - enter the name of the function: `memory-lambda` (see image below, this name must match the lambda name in the `deploy.sh` script you use later)
+- click on the triangle next to `Choose or create an execution role`
+- choose `Create a new role with basic Lambda permissions`
 - press the orange `Create` button
 
 <p align="center">
