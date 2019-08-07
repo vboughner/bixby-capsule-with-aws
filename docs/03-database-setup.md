@@ -2,6 +2,7 @@
 
 You'll start by creating a table for storing "memories" for the example capsule. Take the following steps:
 - log into the AWS Management Console and go to the [AWS DynamoDB Dashboard](https://console.aws.amazon.com/dynamodb)
+- look on the top line of the console, make sure that you have selected the `N. Virginia` region (which is `us-east-1`, and matches what is in the code, if you choose a different region update `db.js`)
 - look for the `Create table` button and click on it
 - you should see the Create DynamoDB table page (pictured below), you'll be entering something at each red arrow,
  please pay close attention because everything is case-sensitive

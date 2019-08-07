@@ -19,6 +19,7 @@ without disturbing current users.
 
 Here's how to create your API Gateway service:
 - go the [API Gateway Service](https://console.aws.amazon.com/apigateway)
+- look on the top line of the console, make sure that you have selected the same region that you used for the lambda and the database
 - press the blue `Create API` button
 - if it asks you to create an example api for the pet store (because this is your first api), click `Ok`
 - select `New API` (instead of `Example API`, if necessary)
