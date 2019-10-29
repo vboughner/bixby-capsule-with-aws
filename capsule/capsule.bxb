@@ -5,7 +5,11 @@ capsule {
   targets {
     target (bixby-mobile-en-US)
   }
+  permissions {
+    bixby-user-id-access
+  }
   runtime-flags {
+    use-input-views-for-selection-list-detail
     concepts-inherit-super-type-features
     support-halt-effect-in-computed-inputs
     modern-prompt-rejection

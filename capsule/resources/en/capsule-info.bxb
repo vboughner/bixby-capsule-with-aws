@@ -6,7 +6,7 @@ capsule-info {
   dispatch-name (My Brain)
   privacy-policy-url (https://vanboughner.com/my-brain-privacy-policy-for-bixby)
   terms-url (https://vanboughner.com/my-brain-terms-of-service-for-bixby)
-  website-url(https://vanboughner.com)
+  website-url(https://github.com/vboughner/bixby-capsule-with-aws)
   search-keywords {
     keyword (memory)
     keyword (remember)

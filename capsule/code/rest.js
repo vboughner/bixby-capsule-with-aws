@@ -44,7 +44,7 @@ rest.postQuery = function($vivContext, additionalParams) {
     const params = {
       secretClientApiKey: secretClientApiKey,
       clientVersion: CLIENT_VERSION,
-      userId: $vivContext.userId,
+      userId: $vivContext.bixbyUserId,
     }
     const combinedParams = Object.assign(params, additionalParams)
     const options = {

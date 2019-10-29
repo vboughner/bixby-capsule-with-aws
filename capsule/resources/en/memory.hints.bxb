@@ -1,14 +1,14 @@
 hints {
   uncategorized {
-    utterance ("Remember my mother's birthday is January 22nd")
-    utterance ("Recall my mother's birthday")
-    utterance ("Remember the cookies are in the back of the 2nd shelf on the right")
-    utterance ("Where did I put the cookies?")
-    utterance ("Remember that I took my vitamins")
-    utterance ("When did I take my vitamins?")
-    utterance ("Remember that I need to buy potatoes")
-    utterance ("What do I need to buy?")
-    utterance ("List all memories")
-    utterance ("Delete all memories")
+    hint ("Ask My Brain to remember my mother's birthday is January 22nd")
+    hint ("Ask My Brain when is my mother's birthday")
+    hint ("Ask My Brain to remember that the cookies are in the back of the 2nd shelf on the right")
+    hint ("Ask My Brain where did I put the cookies?")
+    hint ("Ask My Brain to remember that I took my vitamins")
+    hint ("Ask My Brain when did I take my vitamins?")
+    hint ("Ask My Brain to remember that I need to buy potatoes")
+    hint ("Ask My Brain what do I need to buy?")
+    hint ("Ask My Brain to list all memories")
+    hint ("Ask My Brain to delete all memories")
   }
 }
