@@ -9,7 +9,7 @@
   "dependencies": {
     "aws-sdk": "^2.203.0",
     "fuse.js": "^3.2.0",
-    "moment": "^2.21.0",
+    "moment": "^2.29.2",
     "semver": "^6.0.0"
   },
   "devDependencies": {}
